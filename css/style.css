@@ -1,0 +1,170 @@
+#fp-nav.right{
+    right: 36px !important;
+}
+#fp-nav ul li, .fp-slidesNav ul li{
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 !important;
+    margin-bottom: 7px !important;
+}
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    width: 10px !important;
+    height: 10px !important;
+    background-color: #ffffff !important;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+    width: 10px !important;
+    height: 10px !important;
+    background-color: #9b9998 !important;
+    margin: 0 !important;
+}
+.fp-viewing-0 #fullpage{
+    transform: translate3d(0px,0px,0px) !important;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999999999999999;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    margin-left: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header nav{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+}
+header nav ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header nav ul li{
+    font-size: 16px;
+    font-family: "Circular Std Medium";
+    font-weight: 500;
+    color: #fff;
+    margin-right: 57px;
+    text-transform: uppercase;
+}
+header nav ul li:last-child{
+    margin-right: 0;
+}
+.header-right{
+    display: flex;
+}
+.header-right a,button{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-right a{
+    background-color: #fff;
+}
+.header-right a i{
+    width: 26px;
+    height: 20px;
+    background: url("../images/icon/ico-mail.png") no-repeat center / cover;
+}
+.header-right button{
+    background-color: #1f1247;
+}
+.header-right .hambuger-span-group{
+    width: 20px;
+    height: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header-right button span{
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+}
+.banner-slide img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.banner-text{
+    position: absolute;
+    top: 50%;
+    left: 168px;
+    transform: translateY(-50%);
+    z-index: 999999;
+    width: 50%;
+    height: 100%;
+}
+.banner-text li{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+.banner-text li.active{
+    opacity: 0;
+}
+.banner-text li h2{
+    font-size: 60px;
+    font-family: "NanumSquare";
+    font-weight: 600;
+    color: #fff;
+    line-height: 80px;
+    letter-spacing: -3px;
+    margin-bottom: 65px;
+}
+.banner-text li a{
+    width: 192px;
+    height: 56px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: "Noto Sans Kr";
+    font-weight: 600;
+    color: #fff;
+}
+.banner-text li a i{
+    width: 14px;
+    height: 14px;
+    background: url("../images/icon/ico-btnArrow.png") no-repeat center / cover;
+    margin-left: 12px;
+}
+.down-btn{
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+.down-btn i{
+    width: 14px;
+    height: 19px;
+    background: url("../images/icon/ico-downArrow.png") no-repeat center / cover;
+}

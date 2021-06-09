@@ -14,11 +14,97 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" integrity="sha512-/AilQf/shuEGfh8c3DoIqcIqHZCKpiImSyt+fxIKJphHiNa6QMPb6AbDly6rkjmGr/5OZd35JtvVkbEKnCZO+A==" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js" integrity="sha512-XOpdFagEEv9XMxN/2EdvFL/PfGtFDjX+AkRznsFHDtdC05YWdkMnz5JZUfrbnEabOQaMc7YNTl2xPbOu3J858Q==" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>IntelliSys | main</title>
 </head>
 <body>
-    
+    <header>
+        <h1>
+            <a href="./index.html">
+                <img src="./images/common/logo.png" alt="logo">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">company</a>
+                </li>
+                <li>
+                    <a href="#">service</a>
+                </li>
+                <li>
+                    <a href="#">product</a>
+                </li>
+                <li>
+                    <a href="#">contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="mailto:blabla@naver.com">
+                <i></i>
+            </a>
+            <button class="hambuger-open-btn">
+                <div class="hambuger-span-group">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </header>
+    <main id="fullpage">
+        <section class="section swiper-container intro-slide">
+            <div class="swiper-wrapper">
+                <div class="banner-slide swiper-slide">
+                    <img src="./images/main/bg/bg1.jpg" alt="">
+                </div>
+                <div class="banner-slide swiper-slide">
+                    <img src="./images/main/bg/bg1.jpg" alt="">
+                </div>
+            </div>
+            <div class="banner-text">
+                <ul>
+                    <li class="banner-slide-text active">
+                        <h2>
+                            개인 활동이력 및 라이프스타일
+                            <br>
+                            분석을 통한 AI 맞춤형
+                            <br>
+                            고객 추천 서비스
+                        </h2>
+                        <a href="#">
+                            솔루션 문의하기
+                            <i></i>
+                        </a>
+                    </li>
+                    <li class="banner-slide-text">
+                        <h2>
+                            개인 활동이력 및 라이프스타일
+                            <br>
+                            분석을 통한 AI 맞춤형
+                            <br>
+                            고객 추천 서비스
+                        </h2>
+                        <a href="#">
+                            솔루션 문의하기
+                            <i></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="down-btn"><i></i></button>
+        </section>
+        <section class="section">
+            section2
+        </section>
+        <section class="section">
+            section3
+        </section>
+    </main>
 
     <script src="./js/fullpage.js"></script>
+    <script src="./js/slide.js"></script>
 </body>
 </html>
