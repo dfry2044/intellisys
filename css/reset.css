@@ -56,3 +56,9 @@ button{
     background: none;
 	cursor: pointer;
 }
+.gray{
+	color: #9ca1a4;
+}
+.black{
+	color: #171717;
+}

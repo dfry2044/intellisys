@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" integrity="sha512-/AilQf/shuEGfh8c3DoIqcIqHZCKpiImSyt+fxIKJphHiNa6QMPb6AbDly6rkjmGr/5OZd35JtvVkbEKnCZO+A==" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js" integrity="sha512-XOpdFagEEv9XMxN/2EdvFL/PfGtFDjX+AkRznsFHDtdC05YWdkMnz5JZUfrbnEabOQaMc7YNTl2xPbOu3J858Q==" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
     <title>IntelliSys | main</title>
 </head>
 <body>
@@ -23,6 +23,7 @@
         <h1>
             <a href="./index.html">
                 <img src="./images/common/logo.png" alt="logo">
+                <img src="./images/common/logo-red.png" alt="logo">
             </a>
         </h1>
         <nav>
@@ -58,10 +59,10 @@
         <section class="section swiper-container intro-slide">
             <div class="swiper-wrapper">
                 <div class="banner-slide swiper-slide">
-                    <img src="./images/main/bg/bg1.jpg" alt="">
+                    <div class="slide-inner" style="background-image: url(./images/main/bg/bg1.jpg);"></div>
                 </div>
                 <div class="banner-slide swiper-slide">
-                    <img src="./images/main/bg/bg1.jpg" alt="">
+                    <div class="slide-inner" style="background-image: url(./images/main/bg/bg2.jpg);"></div>
                 </div>
             </div>
             <div class="banner-text">
@@ -97,10 +98,48 @@
             <button class="down-btn"><i></i></button>
         </section>
         <section class="section">
-            section2
+            <img src="./images/main/graphic/people01.png" alt="people01" class="graphic-people">
+            <div class="object-group">
+                <img src="./images/object/pie01.png" alt="pie">
+                <img src="./images/object/pie02.png" alt="pie">
+                <img src="./images/object/circle01.png" alt="circle">
+            </div>
+            <div class="sec-text center">
+                <p>인텔리시스는</p>
+                <h2>
+                    <span class="gray">
+                        서울대 컴퓨터공학부의
+                        <br>
+                        선도적인 AI 인력들이 독보적인 기술력을
+                    </span>
+                    <br>
+                    <span class="black">
+                        바탕으로 이커머스의 초개인화 서비스를
+                        <br>
+                        지원하는 인텔리시스 입니다.
+                    </span>
+                </h2>
+                <a href="#" class="black-link">회사소개바로가기</a>
+            </div>
         </section>
         <section class="section">
-            section3
+            <div class="sec-text left">
+                <p>인텔리시스 제품특징</p>
+                <h2>
+                    <span class="black">
+                        개인의 행동이력, 라이프 스타일을
+                        <br>
+                        바탕으로 정교하게 학습된 AI 기술을
+                    </span>
+                    <br>
+                    <span class="gray">
+                        통한 개개인의 고객에게 맞춤화된
+                        <br>
+                        추천 서비스를 제공합니다.
+                    </span>
+                </h2>
+                <a href="#" class="black-link">서비스바로가기</a>
+            </div>
         </section>
     </main>
 

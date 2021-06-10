@@ -1,3 +1,43 @@
+@keyframes fadeIn-up{
+    0%{
+        margin-top: 10px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+@keyframes fadeOut-up{
+    0%{
+        margin-top: 0;
+        opacity: 1;
+    }
+    100%{
+        margin-top: 10px;
+        opacity: 0;
+    }
+}
+@keyframes objectMove1{
+    0%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
+@keyframes objectRotate1{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 #fp-nav.right{
     right: 36px !important;
 }
@@ -24,6 +64,49 @@
 .fp-viewing-0 #fullpage{
     transform: translate3d(0px,0px,0px) !important;
 }
+.fp-viewing-0 .banner-text{
+    animation: fadeIn-up 0.75s 0.3s ease forwards;
+}
+body:not(.fp-viewing-0) .banner-text{
+    opacity: 1;
+    margin-top: 0;
+    animation: fadeOut-up 0.75s ease forwards;
+}
+body:not(.fp-viewing-0) header{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+body.fp-viewing-1 header{
+    border-bottom: 1px solid rgba(31, 18, 71, 0.5);
+    transition: 0.3s ease;
+}
+body.fp-viewing-1 header nav ul li{
+    color: #1f1247;
+}
+body.fp-viewing-1 header h1 a img{
+    opacity: 0;
+}
+body.fp-viewing-1 header h1 a img+img{
+    opacity: 1;
+}
+body.fp-viewing-1 .section:nth-child(2) .sec-text{
+    animation: fadeIn-up 0.75s 0.3s ease forwards;
+}
+body:not(.fp-viewing-1) .section:nth-child(2) .sec-text{
+    opacity: 1;
+    margin-top: 0;
+    animation: fadeOut-up 0.75s 0.3s ease forwards;
+}
+body.fp-viewing-2 .section:nth-child(3) .sec-text{
+    animation: fadeIn-up 0.75s 0.3s ease forwards;
+}
+body:not(.fp-viewing-2) .section:nth-child(3) .sec-text{
+    opacity: 1;
+    margin-top: 0;
+    animation: fadeOut-up 0.75s 0.3s ease forwards;
+}
+.swiper-slide{
+    overflow: hidden;
+}
 header{
     position: fixed;
     top: 0;
@@ -34,12 +117,34 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.3s ease;
 }
 header h1{
     margin-left: 150px;
     height: 100%;
     display: flex;
     align-items: center;
+    position: relative;
+}
+header h1 a{
+    height: 100%;
+    display: block;
+}
+header h1 img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: 0.3s ease;
+}
+header h1 img+img{
+    opacity: 0;
+}
+header h1:hover img{
+    opacity: 0;
+}
+header h1:hover img+img{
+    opacity: 1;
 }
 header nav{
     position: absolute;
@@ -60,9 +165,13 @@ header nav ul li{
     color: #fff;
     margin-right: 57px;
     text-transform: uppercase;
+    transition: 0.3s ease;
 }
 header nav ul li:last-child{
     margin-right: 0;
+}
+header nav ul li:hover{
+    opacity: 0.5;
 }
 .header-right{
     display: flex;
@@ -73,6 +182,7 @@ header nav ul li:last-child{
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateY(-1px);
 }
 .header-right a{
     background-color: #fff;
@@ -97,11 +207,19 @@ header nav ul li:last-child{
     height: 3px;
     background-color: #fff;
 }
-.banner-slide img{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+.banner-slide{
+    position: relative;
 }
+.banner-slide .slide-inner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+}
+
 .banner-text{
     position: absolute;
     top: 50%;
@@ -110,6 +228,8 @@ header nav ul li:last-child{
     z-index: 999999;
     width: 50%;
     height: 100%;
+    opacity: 0;
+    margin-top: 10px;
 }
 .banner-text li{
     position: absolute;
@@ -142,12 +262,21 @@ header nav ul li:last-child{
     font-family: "Noto Sans Kr";
     font-weight: 600;
     color: #fff;
+    transition: 0.3s ease;
 }
 .banner-text li a i{
     width: 14px;
     height: 14px;
     background: url("../images/icon/ico-btnArrow.png") no-repeat center / cover;
     margin-left: 12px;
+    transition: 0.3s ease;
+}
+.banner-text li a:hover{
+    background-color: #fff;
+    color: #1f1247;
+}
+.banner-text li a:hover i{
+    background:url("../images/icon/ico-btnArrow-purple.png") no-repeat center / cover
 }
 .down-btn{
     position: absolute;
@@ -167,4 +296,94 @@ header nav ul li:last-child{
     width: 14px;
     height: 19px;
     background: url("../images/icon/ico-downArrow.png") no-repeat center / cover;
+}
+
+/* sec2 */
+.object-group{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+.object-group img{
+    position: absolute;
+}
+.object-group img:nth-child(1){
+    top: 0;
+    right: 400px;
+    animation: objectMove1 3s ease-in-out forwards infinite;
+}
+.object-group img:nth-child(2){
+    top: 590px;
+    left: 350px;
+    animation: objectRotate1 10s 1s ease-in forwards infinite;
+}
+.object-group img:nth-child(3){
+    bottom: 115px;
+    left: 1330px;
+    animation: objectMove1 3s 1s linear forwards infinite;
+}
+.section:nth-child(2){
+    overflow: hidden;
+}
+.section:nth-child(2) .graphic-people{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 999;
+}
+.sec-text{
+    font-family: "NanumSquare";
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    margin-top: 10px;
+    animation: fadeOut-up 0.75s 0.3s ease forwards;
+}
+.sec-text.center{
+    left: 50%;
+    text-align: center;
+}
+.sec-text.left{
+    left: 530px;
+    transform: translate(0, -50%);
+}
+.section:nth-child(2) .sec-text{
+    top: calc(50% - 100px);
+}
+.sec-text p{
+    font-size: 20px;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 40px;
+}
+.sec-text h2{
+    font-size: 43px;
+    font-weight: 800;
+    line-height: 62px;
+    margin-bottom: 50px;
+}
+.sec-text a{
+    font-size: 16px;
+    font-family: "NanumSquare";
+    font-weight: 500;
+    padding: 0 25px;
+    height: 54px;
+    border-radius: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec-text a.black-link{
+    background-color: #000;
+    color: #fff;
+}
+
+/* sec3 */
+.section:nth-child(3){
+    background-color: #f5f5f5;
 }
