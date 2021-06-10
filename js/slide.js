@@ -29,5 +29,3 @@ var swiperOptions = {
         }
     }
 };
-
-var swiper = new Swiper(".swiper-container", swiperOptions);
