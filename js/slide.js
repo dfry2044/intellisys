@@ -3,6 +3,7 @@ var interleaveOffset = 0.5;
 var swiperOptions = {
     autoplay: {
         delay: 3000,
+        disableOnInteraction: false,
     },
     loop:true,
     allowTouchMove: false,
@@ -12,8 +13,7 @@ var swiperOptions = {
             var swiper = this;
             for (var i = 0; i < swiper.slides.length; i++) {
                 var slideProgress = swiper.slides[i].progress;
-                // var innerOffset = swiper.width * interleaveOffset;
-                var innerOffset = window.innerWidth * interleaveOffset;
+                var innerOffset = swiper.width * interleaveOffset;
                 var innerTranslate = slideProgress * innerOffset;
                 swiper.slides[i].querySelector(".slide-inner").style.transform =
                 "translate3d(" + innerTranslate + "px, 0, 0)";
@@ -30,4 +30,4 @@ var swiperOptions = {
     }
 };
 
-var swiper = new Swiper('.swiper-container', swiperOptions);
+var swiper = new Swiper('.intro-slide', swiperOptions)

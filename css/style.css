@@ -279,7 +279,11 @@ header nav ul li:hover{
     background-size: cover;
     background-position: center;
 }
-
+.banner-slide .slide-inner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .banner-text{
     position: absolute;
     top: 50%;
