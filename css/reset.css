@@ -57,8 +57,11 @@ button{
 	cursor: pointer;
 }
 .gray{
-	color: #9ca1a4;
+	color: #9ca1a4 !important;
 }
 .black{
-	color: #171717;
+	color: #171717 !important;
+}
+.white{
+	color: #fff !important;
 }
