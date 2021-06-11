@@ -200,6 +200,9 @@ header h1 .purple{
 header h1:hover .white{
     opacity: 0;
 }
+header h1:hover .purple{
+    opacity: 0;
+}
 header h1:hover .red{
     opacity: 1;
 }
