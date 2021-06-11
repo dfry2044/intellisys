@@ -65,3 +65,6 @@ button{
 .white{
 	color: #fff !important;
 }
+.bold{
+	font-weight: 600;
+}

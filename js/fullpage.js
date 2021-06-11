@@ -3,5 +3,6 @@ $(document).ready(function(){
         navigation: true,
         navigationPosition: 'right', 
         scrollingSpeed: 700,
+        scrollOverflow: true
     })
 })
