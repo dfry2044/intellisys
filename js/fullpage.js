@@ -2,7 +2,7 @@ $(document).ready(function(){
     $("#fullpage").fullpage({
         navigation: true,
         navigationPosition: 'right', 
-        scrollingSpeed: 700,
-        scrollOverflow: true
+        scrollingSpeed: 1000,
+        scrollOverflow: true,
     })
 })
