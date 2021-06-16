@@ -44,4 +44,17 @@ $(document).ready(function(){
     function countUpFunc(i){
         countObject.countUp(i, count0, count1, count2, count3)
     }
-})
+});
+
+
+
+/* $('#fullpage').fullpage({
+    onLeave: function(index, nextIndex, direction){
+        var leavingSection = $(this);
+
+        //after leaving section 1
+        if(index == 4 && direction =='down'){ 
+            
+        }          
+    }
+}); */
