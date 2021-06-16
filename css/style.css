@@ -573,16 +573,19 @@ header nav ul li:hover{
     margin: 0 auto;
     padding-top: 340px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-start;
     padding-bottom: 155px;
     position: relative;
     z-index: 9999;
 }
 .section:nth-child(5) .sec-inner .sec-text{
-    position: static;
+    position: absolute;
+    left: 0;
+    top: 10%;
     transform: translate(0,0);
 }
+
 .effect-content li{
     display: flex;
     margin-bottom: 102px;
