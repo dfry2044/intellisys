@@ -618,12 +618,12 @@ header nav ul li:hover{
 .effect-object img:nth-child(1){
     top: 654px;
     left: 404px;
-    animation: objectMove1 3s ease-in-out forwards infinite;
+    animation: objectMove1 10s linear forwards infinite;
 }
 .effect-object img:nth-child(2){
     top: 134px;
     right: -200px;
-    animation: objectRotate1 10s 1s ease-in forwards infinite;
+    animation: objectRotate1 30s 1s linear forwards infinite;
 }
 .effect-object img:nth-child(3){
     right: 400px;
