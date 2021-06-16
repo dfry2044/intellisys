@@ -431,6 +431,7 @@ header nav ul li:hover{
     font-family: "NanumSquare";
     position: absolute;
     top: 50%;
+    left: 0;
     transform: translate(-50%,-50%);
     opacity: 0;
     margin-top: 10px;
@@ -442,7 +443,7 @@ header nav ul li:hover{
     text-align: center;
 }
 .sec-text.left{
-    left: 530px;
+    left: 0;
     transform: translate(0, -50%);
 }
 .section:nth-child(2) .sec-text{
@@ -498,7 +499,7 @@ header nav ul li:hover{
 }
 .service-slide{
     position: absolute;
-    right: 530px;
+    right: 0;
     top: 0;
     height: 100%;
     display: flex;
@@ -546,7 +547,7 @@ header nav ul li:hover{
 }
 .section:nth-child(4) .img-group{
     position: absolute;
-    right: 614px;
+    right: 0;
     top: calc(50% - 30px);
     transform: translateY(-50%);
     z-index: 1000;
@@ -578,7 +579,7 @@ header nav ul li:hover{
     top: 670px;
 }
 .section:nth-child(5) .sec-inner{
-    width: 1500px;
+    max-width: 1500px;
     height: 100%;
     margin: 0 auto;
     padding-top: 340px;
@@ -646,7 +647,7 @@ footer{
     background-color: #fff;
 }
 .footer-inner{
-    width: 1500px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 .fot-top{
@@ -745,7 +746,19 @@ footer{
     line-height: 22px;
     margin-top: 30px;
 }
-
+.sec-inner{
+    max-width: 1500px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
+}
+.product-section-object{
+    position: absolute;
+    bottom: -32px;
+    left: -112px;
+    animation: objectRotate1 13s 1s ease-in forwards infinite;
+}
 @media all and (max-width:1920px){
     header{
         height: 62px;
@@ -810,13 +823,77 @@ footer{
         height: 40px;
     }
     .sec-text.left{
-        left: 406px;
     }
     .service-slide{
-        right: 366px;
+        right: 0;
     }
     .service-slide ul li{
         width: 230px !important;
         min-height: 230px !important;
+    }
+    .service-slide ul li p{
+        font-size: 15px;
+    }
+    .section:nth-child(4) .img-group{
+        right: 105px;
+    }
+    .section:nth-child(4) .img-group li{
+        margin-left: 30px;
+    }
+    .section:nth-child(4) .img-group li:nth-child(1) img{
+        width: 117px;
+    }
+    .section:nth-child(4) .img-group li:nth-child(2) img{
+        width: 61px;
+    }
+    .section:nth-child(4) .img-group li:nth-child(3) img{
+        width: 96px;
+    }
+    .effect-content li span{
+        font-size: 22px;
+        min-width: 182px;
+    }
+    .effect-content li h3{
+        font-size: 176px;
+        padding: 59px 0;
+    }
+    .effect-content li p{
+        font-size: 14px;
+    }
+    .sec-inner{
+        width: 1150px;
+    }
+
+    .effect-object img:nth-child(1){
+        width: 196px;
+        right: 310px;
+    }
+    .effect-object img:nth-child(2){
+        width: 658px;
+        right: -196px;
+    }
+    .effect-object img:nth-child(3){
+        width: 522px;
+        right: 263px;
+    }
+
+    .object-group img:nth-child(1){
+        right: 308px;
+    }
+    .object-group img:nth-child(2){
+        top: 458px;
+        left: 268px;
+    }
+    .object-group img:nth-child(3){
+        bottom: 86px;
+        left: 1020px;
+    }
+
+    .footer-inner{
+        max-width: 1150px;
+    }
+    .fot-bottom{
+        padding-top: 27px;
+        padding-bottom: 107px;
     }
 }

@@ -14,9 +14,6 @@ $(document).ready(function(){
         scrollingSpeed: 1000,
         scrollOverflow: true,
         onLeave:function(index){
-            if(index == 3){
-                
-            }
             if(index == 4){
                 var i = 0;
                 var countInterval = setInterval(function(){
@@ -28,8 +25,8 @@ $(document).ready(function(){
                 },500)
                 $(".section").eq(4).on('mousewheel',function(e){
                     var wheel = e.originalEvent.wheelDelta;
-                    var data = $(".fp-scroller").css("transform");
-                    var text = $(".section").eq(4).find(".sec-text");
+                    var data = $(".fp-scroller").eq(1).css("transform");
+                    var text = $(".section").eq(4).find(".sec-inner").find(".sec-text.left");
                     //스크롤값을 가져온다.
                     if(wheel>0){
                         //스크롤 올릴때
