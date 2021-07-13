@@ -1,0 +1,138 @@
+@keyframes fadeIn-up{
+    0%{
+        transform:translateY(30px);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+/* sub common */
+.page-side{
+    position:fixed;
+    left:150px;
+    top:220px;
+    z-index:900909090909090909090;
+}
+.page-title{
+    width: 100%;
+    height:410px;
+}
+.page-title h2{
+    font-size: 76px;
+    font-family: "Circular Std Medium";
+    font-weight: 500;
+    color: #000;
+    line-height:79px; 
+    transform:translateY(25px);
+    opacity:0;
+    animation:fadeIn-up 0.5s ease forwards ;
+}
+.page-title .sec-inner{
+    display:flex;
+    align-items:center;
+}
+.sec-inner{
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.page-visual{
+    height: 800px;
+}
+.page-visual .sec-inner{
+    display:flex;
+    align-items:center;
+}
+.page-visual h3{
+    font-size: 24px;
+    font-family: "NanumSquare";
+    font-weight: 500;
+    color: #fff;
+    line-height: 45px;
+    transform:translateY(25px);
+    opacity:0;
+    animation:fadeIn-up 0.5s 0.25s ease forwards ;
+}
+.page-side li{
+    margin-bottom:32px;
+}
+.page-side a{
+    font-size: 16px;
+    font-family: "Circular Std Medium";
+    font-weight: 500;
+    color: #000;
+    transition: 0.3s ease;
+}
+.page-side li.active a{
+    text-decoration: underline;
+}
+.page-side li:not(.active) a{
+    color:#9b9b9b;
+}
+.page-side li a:hover{
+    opacity:0.5;
+}
+.sec-move{
+    position:relative;
+    height:115px;
+    /* margin: 65px; */
+    position:sticky;
+    top:0;
+    background-color:#fff;
+    z-index:900909090909;
+}
+.sec-move .move-btn-group{
+    height:100%;
+    display:flex;
+    align-items:center;
+    width:100%;
+    max-width:1440px;
+    margin:0 auto;
+}
+.sec-move .move-btn-group button{
+    padding: 0 32px;
+    border-radius:25px;
+    font-size:20px;
+    font-family:"Circular Std Regular";
+    font-weight:400;
+    color:#8d8d8d;
+    margin-right:10px;
+    height:50px;
+}
+.sec-move .move-btn-group button.active{
+    color:#ffffff;
+    background-color:#684aec;
+}
+.sec-title{
+    padding: 70px 0;
+    display: flex;
+}
+.sec-title h3{
+    font-size: 50px;
+    font-family: "Circular Std Medium";
+    font-weight: 500;
+    color: #000;
+    min-width: 515px;
+}
+.sec-title p{
+    font-size: 18px;
+    font-family: "NanumSquare";
+    font-weight: 400;
+    color: #000;
+    line-height: 32px;
+}
+
+.space{
+    height:50vh;
+}
+
+
+/* AI Retail Recommendation */
+.a-r-r.page-visual{
+    background: url("../images/sub/visual/visual01.jpg") no-repeat top / cover;
+    background-attachment: fixed;
+}
