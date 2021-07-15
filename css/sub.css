@@ -1,6 +1,6 @@
 @keyframes fadeIn-up{
     0%{
-        transform:translateY(30px);
+        transform:translateY(40px);
         opacity:0;
     }
     100%{
@@ -28,7 +28,7 @@
     line-height:79px; 
     transform:translateY(25px);
     opacity:0;
-    animation:fadeIn-up 0.5s ease forwards ;
+    animation:fadeIn-up 0.75s ease forwards ;
 }
 .page-title .sec-inner{
     display:flex;
@@ -55,7 +55,7 @@
     line-height: 45px;
     transform:translateY(25px);
     opacity:0;
-    animation:fadeIn-up 0.5s 0.25s ease forwards ;
+    animation:fadeIn-up 0.75s 0.25s ease forwards ;
 }
 .page-side li{
     margin-bottom:32px;
@@ -79,7 +79,6 @@
 .sec-move{
     position:relative;
     height:115px;
-    /* margin: 65px; */
     position:sticky;
     top:0;
     background-color:#fff;
@@ -102,14 +101,22 @@
     color:#8d8d8d;
     margin-right:10px;
     height:50px;
+    transition: 0.3s ease;
 }
 .sec-move .move-btn-group button.active{
     color:#ffffff;
     background-color:#684aec;
 }
+.sec-move .move-btn-group button:hover{
+    color:#684aec
+}
 .sec-title{
     padding: 70px 0;
     display: flex;
+    border-bottom: 1px solid #f1f1f1;
+    opacity:0;
+    visibility: visible;
+    transform: translateY(40px);
 }
 .sec-title h3{
     font-size: 50px;
@@ -121,9 +128,12 @@
 .sec-title p{
     font-size: 18px;
     font-family: "NanumSquare";
-    font-weight: 400;
+    font-weight: 600;
     color: #000;
     line-height: 32px;
+}
+.sec-title.show{
+    animation:fadeIn-up 0.75s ease forwards;
 }
 
 .space{
@@ -135,4 +145,61 @@
 .a-r-r.page-visual{
     background: url("../images/sub/visual/visual01.jpg") no-repeat top / cover;
     background-attachment: fixed;
+}
+.a-r-r.sec-diagram:not(.sec-diagram-group){
+    padding: 55px 0;
+    background-color: #fafafa;
+    margin-bottom: 70px;
+}
+.a-r-r.sec-diagram.sec-diagram-group{
+    padding-top: 80px;
+}
+.a-r-r.sec-diagram .diagram-line01{
+    /* margin:15px auto 35px; */
+    margin:15px auto 0;
+    display:block;
+}
+.a-r-r.sec-diagram .diagram-line02{
+    margin:0 auto;
+    display:block;
+}
+.a-r-r.sec-diagram .diagram-text01{
+    margin:0 auto;
+    display:block
+}
+.a-r-r.sec-diagram .diagram-object01{
+    margin: 0 auto 10px;
+    display:block;
+    opacity: 0;
+}
+.a-r-r.sec-diagram .diagram-obj01{
+    margin: 0 auto;
+    display:block;
+}
+.a-r-r.sec-diagram .diagram-box{
+    background-color: #fafafa;    
+    position: relative;
+    top: -80px;
+    z-index: -1;
+    padding-top: 115px;
+    padding-bottom: 25px;
+}
+.a-r-r.sec-diagram img{
+    opacity:0;
+    transform: translateY(40px);
+}
+.a-r-r.sec-diagram.show img:nth-child(1){
+    animation: fadeIn-up 0.75s ease forwards;
+}
+.a-r-r.sec-diagram.show img:nth-child(2){
+    animation: fadeIn-up 0.75s 0.15s ease forwards;
+}
+.a-r-r.sec-diagram.show img:nth-child(3){
+    animation: fadeIn-up 0.75s 0.3s ease forwards;
+}
+.a-r-r.sec-diagram.show .diagram-box img:nth-child(1){
+    animation: fadeIn-up 0.75s 0.45s ease forwards;
+}
+.a-r-r.sec-diagram.show .diagram-box img:nth-child(2){
+    animation: fadeIn-up 0.75s 0.6s ease forwards;
 }
