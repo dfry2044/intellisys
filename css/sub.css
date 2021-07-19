@@ -13,7 +13,7 @@
 .page-side{
     position:fixed;
     left:150px;
-    top:220px;
+    top:136px;
     z-index:900909090909090909090;
 }
 .page-title{
@@ -76,13 +76,20 @@
 .page-side li a:hover{
     opacity:0.5;
 }
+.page-side.white a{
+    color: #fff;
+}
+.page-side.white li:not(.active) a{
+    color: rgb(186, 186, 186);
+}
+
 .sec-move{
     position:relative;
-    height:115px;
+    height:76px;
     position:sticky;
     top:0;
-    background-color:#fff;
     z-index:900909090909;
+    margin: 15px;
 }
 .sec-move .move-btn-group{
     height:100%;
@@ -91,6 +98,7 @@
     width:100%;
     max-width:1440px;
     margin:0 auto;
+    background-color: #fff;
 }
 .sec-move .move-btn-group button{
     padding: 0 32px;
@@ -109,6 +117,9 @@
 }
 .sec-move .move-btn-group button:hover{
     color:#684aec
+}
+.sec-move .move-btn-group button.active:hover{
+    color:#ffffff;
 }
 .sec-title{
     padding: 70px 0;
@@ -139,7 +150,6 @@
 .space{
     height:50vh;
 }
-
 
 /* AI Retail Recommendation */
 .a-r-r.page-visual{
@@ -202,4 +212,127 @@
 }
 .a-r-r.sec-diagram.show .diagram-box img:nth-child(2){
     animation: fadeIn-up 0.75s 0.6s ease forwards;
+}
+
+@media all and (max-width:1920px){
+    .sec-inner{
+        max-width: 1024px;
+    }
+    .page-visual{
+        height:612px;
+    }
+    .a-r-r.sec-diagram img{
+        width: 100%;
+    }
+    .sec-title h3{
+        min-width:394px;
+        font-size: 38px;
+    }
+    .sec-title p{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .sec-move .move-btn-group{
+        max-width:1024px;
+    }
+    .page-title h2{
+        font-size: 58px;
+        line-height: 60px;
+    }
+    .page-side{
+        top: 152px;
+        left: 115px;
+    }
+    .page-side a{
+        font-size: 14px;
+    }
+    .page-visual h3{
+        font-size: 18px;
+        line-height: 34px;
+    }
+
+    .a-r-r.sec-diagram .diagram-box{
+        top:-56px;
+    }
+    .a-r-r.sec-diagram .diagram-line02{
+        margin: -45px auto 18px auto;
+    }
+    .sec-move .move-btn-group button{
+        font-size:16px;
+        height: 42px;
+        padding: 0 24px;
+    }
+}
+@media all and (max-width:1500px){
+    .sec-inner{
+        max-width:860px;
+    }
+    .page-side{
+        top: 80px;
+        left: 90px;
+    }
+    .page-side a{
+        font-size: 11px;
+    }
+    .page-title{
+        height: 246px;
+    }
+    .page-title h2{
+        font-size: 45px;
+        line-height: 47px;
+    }
+    .page-visual{
+        height: 32.133vw;
+    }
+    .page-visual h3{
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .sec-move{
+        height: 48px;
+    }
+    .sec-move .move-btn-group{
+        max-width:860px;
+    }
+    .sec-move .move-btn-group button{
+        font-size: 12px;
+        height: 34px;
+        padding: 0 18px;
+    }
+    .sec-title h3{
+        font-size:30px;
+        line-height: 33px;
+        min-width: 304px;
+    }
+    .sec-title p{
+        font-size: 11px;
+        line-height: 19px;
+    }
+    .sec-title{
+        padding: 45px 0;
+    }
+    .a-r-r.sec-diagram:not(.sec-diagram-group){
+        padding: 34px 0;
+        margin-bottom: 38px;
+    }
+    .a-r-r.sec-diagram.sec-diagram-group{
+        padding-top:45px;
+    }
+    .a-r-r.sec-diagram .diagram-box{
+        top: -48px;
+    }
+}
+@media all and (max-width:1280px){
+    .page-title .sec-inner{
+        max-width: 57.813vw;
+    }
+    .sec-inner{
+        max-width: 57.813vw;
+    }
+    .sec-move .move-btn-group{
+        max-width: 57.813vw;
+    }
+    .page-side{
+        left: 4.688vw;
+    }
 }
