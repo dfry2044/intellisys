@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sub.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://geothermie.es.fr/wp-content/themes/es-geothermie/assets/js/vendors/CustomEase.min.js?ver=4.9.5"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+
+    <title>IntelliSys | FITZME</title>
+</head>
+<body>
+    <header class="sub">
+        <h1>
+            <a href="./index.html">
+                <img src="./images/common/logo-black.png" alt="logo" class="black">
+                <img src="./images/common/logo-red.png" alt="logo" class="red">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">company</a>
+                </li>
+                <li>
+                    <a href="#">service</a>
+                </li>
+                <li>
+                    <a href="#">product</a>
+                </li>
+                <li>
+                    <a href="#">contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="mailto:blabla@naver.com">
+                <i></i>
+            </a>
+            <button class="hambuger-open-btn">
+                <div class="hambuger-span-group">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </header>
+    <main>
+        <aside class="page-side">
+            <ul>
+                <li class="active">
+                    <a href="#">
+                        AI Hybrid Retail
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        FITZME
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        적용사례
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        주요프로젝트
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="page-title">
+            <div class="sec-inner">
+                <h2>
+                    인공지능 패션
+                    <br> 
+                    스타일리스트 솔루션
+                    <br>
+                    FITZME
+                </h2>
+            </div>
+        </div>
+        <section class="page-visual fitzme">
+            <div class="sec-inner">
+                <h3>
+                    인텔리시스는 쉽고 빠른 이미지 검색, 인공지능 스타일링과 코디, 개인의 선호와
+                    <br>
+                    상황을 고려하는 인공지능 패션 솔루션을 패션기업에 제공합니다.
+                    <br>
+                    인공지능 서비스를 통해 사용자의 패션 쇼핑에서의 탐색과 의사결정 편의성을
+                    <br>
+                    획기적으로 향상시킬 수 있습니다.
+                </h3>
+            </div>
+        </section>
+        <section class="sec-wave">
+            <div class="sec-inner">
+                <div class="sec-title">
+                    <h3>
+                        Persona
+                        <br>
+                        Learning
+                    </h3>
+                    <p> 
+                        인공지능이 고객의 행동에 내포된 텍스트, 이미지를 분석해 고객의 페르소나를
+                        <br>
+                        학습하여, 개인화된 캠페인, 개인화 추천 등 초개인화 서비스가 가능합니다.
+                    </p>
+                </div>
+            </div>
+            <div class="sec-wave-content">
+                <canvas id="canvas"></canvas>
+                <div class="sec-inner">
+                    <ul class="sub-content-wrap">
+                        <li>
+                            <span>01</span>
+                            <h4>
+                                <span>FITZME Search - </span>
+                                <br>
+                                지능형 패션 및 스타일링
+                            </h4>
+                            <ul class="sub-content">
+                                <li>
+                                    <span></span>
+                                    <div class="sub-content-text">
+                                        <h5>시각 검색</h5>
+                                        <p>
+                                            사진으로 유사 상품 검색
+                                            <br>
+                                            키워드로 패션 이미지 검색
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span></span>
+                                    <div class="sub-content-text">
+                                        <h5>어울림/코디 추천</h5>
+                                        <p>
+                                            관심 상품에 어울리는 상품 추천
+                                            <br>
+                                            관심 상품 중심 한 벌 '코디'
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>02</span>
+                            <h4>
+                                <span>FITZME Persona -</span>
+                                <br>
+                                패션 쇼핑 초개인화
+                            </h4>
+                            <ul class="sub-content">
+                                <li>
+                                    <span></span>
+                                    <div class="sub-content-text">
+                                        <h5>상황에 따른 코디 추천</h5>
+                                        <p>
+                                            날씨, 상황에 따른 트렌드 학습
+                                            <br>
+                                            상황인지 스타일 추천
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span></span>
+                                    <div class="sub-content-text">
+                                        <h5>페르소나 기반 상품 추천</h5>
+                                        <p>
+                                            개인별 스타일 학습 (페르소나)
+                                            <br>
+                                            검색과 스타일링의 개인화
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="section fp-auto-height">
+        <div class="footer-inner">
+            <div class="fot-top">
+                <nav class="fnb">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                이용약관
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="bold">
+                                개인정보보호정책
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="sns">
+                    <li>
+                        <a href="#" class="blog">
+                            <i></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="face">
+                            <i></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="inst">
+                            <i></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="youtube">
+                            <i></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fot-bottom">
+                <img src="./images/common/logo-gray.png" alt="logo-gray">
+                <div class="fot-content">
+                    <ul>
+                        <li> (주)인텔리시스 </li>
+                        <li> 대표이사 : 박은영, 박성찬 </li>
+                        <li> 서울 관악구 관악로 1, 138동 111, 112, 113 호 </li>
+                    </ul>
+                    <ul>
+                        <li> 사업자등록번호 329-81-00803 </li>
+                        <li> 문의 contact@intellisys.co.kr  </li>
+                    </ul>
+                    <p class="copy">
+                        Copyright&copy;2021 Intellisys
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/common.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/wave.js"></script>
+</body>
+</html>
