@@ -18,7 +18,6 @@
 }
 .page-title{
     width: 100%;
-    /* height:410px; */
     padding: 130px 0;
 }
 .page-title h2{
@@ -30,10 +29,18 @@
     transform:translateY(25px);
     opacity:0;
     animation:fadeIn-up 0.75s ease forwards ;
+    margin-bottom: 30px;
+}
+.page-title p{
+    font-size: 22px;
+    font-family: "NanumSquare";
+    font-weight: 400;
+    color: #000;
+    line-height: 36px;
 }
 .page-title .sec-inner{
     display:flex;
-    align-items:center;
+    flex-direction: column;
 }
 .sec-inner{
     max-width: 1440px;
@@ -84,6 +91,12 @@
     color: rgb(186, 186, 186);
 }
 
+.sec-diagram img{
+    opacity: 0;
+    transform: translateY(40px);
+    width: 100%;
+}
+
 .sec-move{
     position:relative;
     height:76px;
@@ -105,7 +118,7 @@
     padding: 0 32px;
     border-radius:25px;
     font-size:20px;
-    font-family:"Circular Std Regular";
+    font-family:"Circular Std Medium";
     font-weight:400;
     color:#8d8d8d;
     margin-right:10px;
@@ -137,12 +150,36 @@
     color: #000;
     min-width: 515px;
 }
+.sec-title h3 span{
+    font-size: 24px;
+    font-family: "NanumSquare";
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+    display: block;
+}
 .sec-title p{
     font-size: 18px;
     font-family: "NanumSquare";
     font-weight: 600;
     color: #000;
     line-height: 32px;
+}
+.sec-title ul li{
+    font-size: 18px;
+    font-family: "Noto Sans Kr";
+    font-weight: 300;
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.sec-title ul li i{
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background: url("../images/icon/ico-list.png") no-repeat center / cover;
+    margin-right: 10px;
 }
 .sec-title.show{
     animation:fadeIn-up 0.75s ease forwards;
@@ -166,6 +203,8 @@
     font-weight: 600;
     color: #d4d4d4;
     margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(40px);
 }
 .sec-wave-content .sub-content-wrap li>h4{
     font-size: 34px;
@@ -174,16 +213,25 @@
     color: #000;
     line-height: 46px;
     margin-bottom: 35px;
+    opacity: 0;
+    transform: translateY(40px);
 }
 .sec-wave-content .sub-content-wrap li>h4 span{
-    font-family: "Circular Std Book"
+    font-family: "Circular Std Book";
+    opacity: 0;
+    transform: translateY(40px);
 }
 .sec-wave-content .sub-content-wrap .sub-content{
     display: flex;
+    opacity: 0;
+    transform: translateY(40px);
 }
 .sec-wave-content .sub-content-wrap .sub-content li{
     display: flex;
     margin-right: 48px;
+}
+.sec-wave-content .sub-content-wrap .sub-content li:last-child{
+    margin-right: 0;
 }
 .sec-wave-content .sub-content-wrap .sub-content span{
     width:20px;
@@ -212,28 +260,26 @@
     position: absolute;
     height: 280px;
 }
-.space{
-    height:50vh;
-}
-
 .sec-wave-content{
     position: relative;
+    padding-bottom: 150px;
+}
+.sec-wave .sec-title h3{
+    line-height: 60px;
 }
 #canvas{
     position: absolute;
 }
-
-
+.sec-diagram:not(.sec-diagram-group){
+    padding: 55px 0;
+    background-color: #fafafa;
+    margin-bottom: 70px;
+}
 
 /* AI Retail Recommendation */
 .a-r-r.page-visual{
     background: url("../images/sub/visual/visual01.jpg") no-repeat top / cover;
     background-attachment: fixed;
-}
-.a-r-r.sec-diagram:not(.sec-diagram-group){
-    padding: 55px 0;
-    background-color: #fafafa;
-    margin-bottom: 70px;
 }
 .a-r-r.sec-diagram.sec-diagram-group{
     padding-top: 80px;
@@ -293,6 +339,361 @@
     background: url("../images/sub/visual/visual02.jpg") no-repeat top / cover;
     background-attachment: fixed;
 }
+.fitzme.sec-wave-content.show .sub-content-wrap li span{
+    animation: fadeIn-up 0.75s ease forwards;
+}
+.fitzme.sec-wave-content.show .sub-content-wrap li h4{
+    animation: fadeIn-up 0.75s 0.15s ease forwards;
+}
+.fitzme.sec-wave-content.show .sub-content-wrap li ul.sub-content{
+    animation: fadeIn-up 0.75s 0.3s ease forwards;
+}
+.fitzme.sec-diagram.show img{
+    animation: fadeIn-up 0.75s ease forwards;
+}
+
+/* inquire */
+.privacy h3{
+    font-size: 22px;
+    font-family: "NanumSquare";
+    font-weight:600;
+    color:#000;
+    margin-bottom: 15px;
+}
+.privacy table{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.privacy table th{
+    border-top: 1px solid #000;
+    background-color: #f7f7f7;
+    height: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "NanumSquare";
+    font-weight: 500;
+    color:#000;
+    width: 30%;
+    vertical-align: middle;
+}
+.privacy table tr{
+    height: 112px;
+    width: 100%;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+}
+.privacy table tr td{
+    width: 30%;
+    vertical-align: middle;
+    font-size: 18px;
+    font-family: "Noto Sans Kr";
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    padding: 0 30px;
+    line-height: 30px;
+}
+.privacy table tr td.left{
+    text-align: left;
+}
+.privacy table tr td strong{
+    font-size: 20px;
+    font-weight: 600;
+}
+.privacy p{
+    font-size: 16px;
+    font-family: "Noto Sans Kr";
+    font-weight: 400;
+    color: #505050;
+    margin-bottom: 10px;
+}
+.privacy p:last-child{
+    margin-bottom: 0;
+}
+.privacy-checklist{
+    margin: 24px 0 48px;
+}
+.privacy-checklist li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: "Noto Sans Kr";
+    font-weight: 600;
+    color: #000;
+}
+.privacy-checklist li:last-child{
+    margin-bottom: 84px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #e2e2e2;
+}
+.privacy-checklist li p{
+    font-size: 16px;
+    font-family: "Noto Sans Kr";
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0;
+    margin-right: 18px;
+}
+.consent-radio label{
+    font-weight: 400;
+}
+.age-checkbox label{
+    margin-right: 18px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+.age-checkbox input:checked+label{
+    background-color: #684aec;
+}
+.age-checkbox input:checked+label i{
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/icon/ico-check-w.png") no-repeat center / cover;
+}
+.age-checkbox input+label i{
+    transition: 0.3s ease;
+}
+#age-checkbox1{
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.consent-radio p{
+    margin-right: 50px;
+}
+.consent-radio input{
+    opacity: 0;
+    visibility: hidden;
+    width:0;
+    height:0;
+}
+.consent-radio label{
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    border: 1px solid #ddd;
+    margin-right: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.consent-radio span{
+    margin-right: 35px;
+}
+.consent-radio input:checked+label{
+    background-color: #684aec;
+}
+.consent-radio input:checked+label i{
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/icon/ico-check-w.png") no-repeat center / cover;
+}
+.consent-radio input+label i{
+    transition: 0.3s ease;
+}
+.join-form{
+    position: relative;
+}
+.join-form li{
+    margin-bottom: 50px;
+    display: flex;
+    align-items:center;
+    font-size: 20px;
+    font-family: "Noto Sans Kr";
+    font-weight:300;
+    color: #000000;
+}
+.join-form li span{
+    font-size: 20px;
+    font-family: "Noto Sans Kr";
+    font-weight:300;
+    color: #000000;
+}
+.join-form li>span{
+    min-width:138px;
+    font-size: 20px;
+    font-family: "Noto Sans Kr";
+    font-weight:600;
+    color: #000;
+}
+.join-form li span.essential-after::after{
+    content: "*";
+    display:inline-block;
+    font-size: 20px;
+    font-family:"Noto Sans Kr";
+    font-weight:600;
+    color: #de0f0f;
+}
+.form-sub-text{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    font-family:"Noto Sans Kr";
+    font-weight:300;
+    color: #797979;
+}
+.join-form .essential-before::before{
+    content: "*";
+    display:inline-block;
+    font-size: 20px;
+    font-family:"Noto Sans Kr";
+    font-weight:600;
+    color: #de0f0f;
+}
+.join-form input{
+    font-size: 20px;
+    font-family:"Noto Sans Kr";
+    font-weight:300;
+    color:#000;
+    padding-bottom: 10px;
+    border-bottom:1px solid #000;
+}
+.join-form input::placeholder{
+    font-size: 20px;
+    font-family:"Noto Sans Kr";
+    font-weight:300;
+    color:#737373;
+}
+.join-form label{
+    width:0;
+    height:0;
+    opacity:0;
+    visibility:hidden;
+}
+.join-form input{
+    width:262px;
+}
+.join-form .tel input{
+    width: 140px;
+    margin: 0 18px;
+}
+.join-form .tel input:first-child{
+    margin-left: 0;
+}
+.join-form .email input{
+    margin: 0 18px;
+}
+.join-form .email input:first-child{
+    margin-left: 0;
+}
+.join-form #emailSelect{
+    width: 262px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-family: "Noto Sans Kr";
+    font-weight:300;
+    color:#000;
+}
+.join-form #companyInput,
+.join-form #titleInput,
+.join-form #contentTextArea,
+.join-form #fleInput{
+    width:100%;
+}
+.join-form .contentTextArea{
+    align-items:flex-start;
+}
+.join-form #contentTextArea{
+    height:100%;
+    min-height:360px;
+    border:1px solid #000;
+    padding: 25px 30px;
+    font-size: 20px;
+    font-family:"Noto Sans Kr";
+    font-weight:300;
+    color:#000;
+}
+.join-form .fileInput .input-group{
+    border-bottom:1px solid #000;
+    width:100%;
+    padding-bottom: 10px;
+}
+.join-form #fileInput{
+    border-bottom:none;
+    visibility: hidden;
+    width: 100%;
+    padding-bottom: 0;
+}
+#fileInput::-webkit-file-upload-button {
+    visibility: hidden;
+    opacity:0;
+}
+.join-form .file{
+    opacity:1;
+    visibility:visible;
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.file p{
+    font-size: 20px;
+    font-family: "Noto Sans Kr";
+    font-weight: 300;
+    color: #737373;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+.join-form .file-custom{
+    width:110px;
+    height:40px;
+    background-color:#fff;
+    border:1px solid #bababa;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 16px;
+    font-family:"Noto Sans Kr";
+    font-weight:400;
+    color:#000;
+    transition: 0.3s ease;
+}
+.join-form .file-custom:hover{
+    background-color:rgb(231, 231, 231);
+}
+#contentTextArea::placeholder{
+    font-size: 20px;
+    font-family:"Noto Sans Kr";
+    font-weight:300;
+    color:#737373;
+}
+.submit-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+.submit-btn input{
+    border: none;
+    background-color: #684aec;
+    color:#fff;
+    font-size: 18px;
+    font-family: "NanumSquare";
+    font-weight: 300;
+    width: 200px;
+    height:54px;
+    margin: 0;
+    padding: 0;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.submit-btn input:hover{
+    background-color: #573bd3;
+}
+.input-group.email{
+    display:flex;
+}
 @media all and (max-width:1920px){
     .sec-inner{
         max-width: 1024px;
@@ -300,12 +701,22 @@
     .page-visual{
         height:612px;
     }
+    .sec-wave-content{
+        padding-bottom:112px;
+    }
     .a-r-r.sec-diagram img{
         width: 100%;
     }
     .sec-title h3{
         min-width:394px;
         font-size: 38px;
+        font-weight: 600;
+    }
+    .sec-wave .sec-title{
+        padding: 125px 0 70px 0;
+    }
+    .sec-wave .sec-title h3{
+        line-height: 45px;
     }
     .sec-title p{
         font-size: 16px;
@@ -341,6 +752,26 @@
         height: 42px;
         padding: 0 24px;
     }
+    .sec-wave-content .sub-content-wrap li>span{
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+    .sec-wave-content .sub-content-wrap li>h4{
+        font-size: 26px;
+        line-height: 35px;
+        margin-bottom: 28px;
+    }
+    .sec-wave-content .sub-content-wrap .sub-content li{
+        margin-right:35px;
+    }
+    .sec-wave-content .sub-content-wrap .sub-content-text h5{
+        font-size: 15px;
+        margin-bottom: 14px;
+    }
+    .sec-wave-content .sub-content-wrap .sub-content-text p{
+        font-size: 14px;
+        line-height: 23px;
+    }
 }
 @media all and (max-width:1500px){
     .sec-inner{
@@ -354,11 +785,16 @@
         font-size: 11px;
     }
     .page-title{
-        height: 246px;
+        padding: 80px 0;
     }
     .page-title h2{
         font-size: 45px;
         line-height: 47px;
+        margin-bottom: 20px;
+    }
+    .page-title p{
+        font-size: 13px;
+        line-height:21px;
     }
     .page-visual{
         height: 32.133vw;
@@ -383,6 +819,10 @@
         line-height: 33px;
         min-width: 304px;
     }
+    .sec-title h3 span{
+        font-size: 14px;
+        margin-bottom: 0;
+    }
     .sec-title p{
         font-size: 11px;
         line-height: 19px;
@@ -400,6 +840,154 @@
     .a-r-r.sec-diagram .diagram-box{
         top: -48px;
     }
+    .sec-wave-content .sub-content-wrap li>span{
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .sec-wave-content .sub-content-wrap li>h4{
+        font-size: 20px;
+        line-height: 27px;
+        margin-bottom: 20px;
+    }
+    .sec-wave-content .sub-content-wrap .sub-content-text h5{
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+    .sec-wave-content .sub-content-wrap .sub-content-text p{
+        font-size: 11px;
+        line-height: 18px;
+    }
+    .sec-wave-content .sub-content-wrap .sub-content li{
+        margin-right: 28px;
+    }
+    .sec-wave-content .sub-content-wrap .sub-content span{
+        margin-right: 6px;
+    }
+    .sec-wave .sec-title{
+        padding: 100px 0 56px 0;
+    }
+    .sec-wave-content{
+        padding-bottom: 90px;
+    }
+    .sec-wave-content .sub-content-wrap .sub-content span{
+        width: 12px;
+        height: 12px;
+        border: 4px solid #684aec;
+    }
+    .privacy h3{
+        font-size: 13px;
+        margin-bottom:10px;
+    }
+    .privacy table tr{
+        height: 36px;
+    }
+    .privacy table th{
+        font-size: 12px;
+        height: 36px;
+    }
+    .privacy table tbody tr{
+        height: 66px;
+    }
+    .privacy table tbody tr td{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .privacy table tbody tr td strong{
+        font-size: 13px;
+    }
+    .privacy table{
+        margin-bottom: 14px;
+    }
+    .privacy p{
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+    .privacy-checklist{
+        margin: 20px 0 30px 0;
+    }
+    .privacy-checklist li{
+        font-size:12px;
+        margin-bottom: 10px;
+    }
+    .privacy-checklist li p{
+        font-size: 12px;
+        margin-right: 30px;
+    }
+    .age-checkbox label{
+        width: 20px;
+        height: 20px;
+    }
+    .consent-radio label{
+        width: 22px;
+        height: 22px;
+        margin-right: 8px;
+    }
+    .age-checkbox input:checked+label i{
+        width: 10px;
+        height: 10px;
+    }
+    .consent-radio input:checked+label i{
+        width: 10px;
+        height: 10px;
+    }
+    .consent-radio span{
+        margin-right: 20px;
+    }
+    .privacy-checklist li:last-child{
+        margin-bottom: 50px;
+        padding-bottom: 25px;
+    }
+    .join-form li>span{
+        font-size: 12px;
+    }
+    .join-form li span.essential-after::after,
+    .join-form .essential-before::before{
+        font-size: 12px;
+    }
+    .join-form li>span{
+        min-width: 82px;
+    }
+    .join-form li{
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+    .join-form li span{
+        font-size: 12px;
+    }
+    .join-form input{
+        padding-bottom: 6px;
+    }
+    .join-form input::placeholder{
+        font-size:12px;
+    }
+    .join-form input{
+        width: 160px;
+        font-size: 12px;
+    }
+    .join-form #emailSelect{
+        width: 160px;
+        font-size: 12px;
+        padding-bottom: 4.5px;
+    }
+    .join-form #contentTextArea{
+        padding: 17px 14px;
+        font-size: 12px;
+        min-height: 210px;
+    }
+    .join-form #contentTextArea::placeholder{
+        font-size: 12px;
+    }
+    .join-form .file-custom{
+        width: 68px;
+        height: 24px;
+        font-size: 11px;
+    }
+    .submit-btn input{
+        width: 120px;
+        height: 32px;
+        padding-bottom: 0;
+        font-size: 11px;
+    }
 }
 @media all and (max-width:1280px){
     .page-title .sec-inner{
@@ -413,5 +1001,344 @@
     }
     .page-side{
         left: 4.688vw;
+    }
+    .join-form input{
+        width: 12.500vw;
+    }
+}
+@media all and (max-width:1024px){
+    .page-side{
+        display: none;
+    }
+    .page-title{
+        padding: 110px 0 64px 0;
+    }
+    .page-title h2.left{
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .page-title h2.center{
+        text-align: center;
+    }
+    .page-title h2{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 30px;
+        margin-bottom: 26px;
+    }
+    .page-title p{
+        font-size: 16px;
+        line-height: 24px;
+        word-break: keep-all;
+    }
+    .page-visual{
+        height: 93.333vw;
+    }
+    .page-visual h3{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .page-visual .sec-inner{
+        max-width: calc(100% - 40px) !important;
+        margin: 0 auto;
+    }
+    .sec-move{
+        height: 40px;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    .sec-move .move-btn-group{
+        align-items: flex-start;
+        height: max-content;
+        padding: 15px ;
+    }
+    .sec-move .move-btn-group{
+        max-width: 100%;
+    }
+    .sec-move .move-btn-group button{
+        font-size: 14px;
+        line-height: 14px;
+        height: 40px;
+    }
+    .sec-title{
+        flex-direction: column;
+        padding: 50px 0;
+        border-bottom: none;
+    }
+    .sec-title h3{
+        font-size: 26px;
+        line-height: 26px;
+        margin-bottom: 24px;
+    }
+    .sec-title p{
+        font-size: 15px;
+        line-height: 22px;
+        word-break: keep-all;
+    }
+
+    .a-r-r.sec-diagram.sec-diagram-group{
+        padding: 0;
+    }
+    .a-r-r.sec-diagram .diagram-box{
+        border-top: none;
+    }
+    .a-r-r .sec-inner{
+        max-width: 100%;
+    }
+    .a-r-r .sec-title{
+        max-width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+    .a-r-r.sec-diagram:not(.sec-diagram-group){
+        padding: 26px 0;
+        margin: 0;
+    }
+    .a-r-r.sec-diagram:not(.sec-diagram-group) img{
+        max-width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+    section.a-r-r:nth-of-type(2) .sec-diagram img{
+        width: auto !important;
+        height: 550px;
+        max-width: max-content !important;
+        margin: auto;
+    }
+    .swiper-wrapper{
+        width: max-content !important;
+        width: auto;
+    }
+    .swiper-slide{
+        width: max-content !important;
+    }
+    .swiper-container{
+        background-color: transparent !important;
+    }
+    .swiper-container-pointer-events{
+        padding: 0 !important;
+    }
+    .a-r-r .sec-inner{
+        max-width:100%;
+    }
+    .a-r-r footer{
+        margin-top: 0;
+    }
+    .a-r-r.page-visual{
+        background: url("../images/sub/visual/visual01-mo.jpg") no-repeat center / cover;
+        background-attachment:scroll !important;
+    }
+
+    .privacy .sec-inner{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .privacy p{
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    .join-form{
+        padding-top: 15px;
+    }
+    .join-form li{
+        margin-bottom: 44px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .join-form li span{
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+    .join-form li span.essential-after::after, .join-form .essential-before::before{
+        font-size: 15px;
+    }
+    .join-form input{
+        width: 100%;
+        font-size: 15px;
+        padding-bottom: 15px;
+    }
+    .join-form input::placeholder{
+        font-size: 15px;
+    }
+    .input-group.email{
+        width: 100%;
+    }
+    .input-group.email .input-group-inner{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .join-form .email input{
+        margin: 0 12px;
+    }
+    .join-form .email input:nth-of-type(2){
+        margin-right: 0;
+    }
+    .join-form #emailSelect{
+        margin-top: 25px;
+        width: 100%;
+        padding-bottom: 15px;
+        font-size: 15px;
+    }
+    .join-form #emailSelect::placeholder{
+        font-size: 15px;
+    }
+    .join-form #contentTextArea::placeholder{
+        font-size: 15px;
+    }
+    .input-group.tel{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .join-form .tel input{
+        margin: 0 12px;
+        width: 100%;
+    }
+    .input-group.tel input:last-child{
+        margin-right: 0;
+    }
+    .join-form .file-custom{
+        margin: 0;
+    }
+    .join-form li:last-child{
+        display: none;
+    }
+    .join-form li.fileInput{
+        margin-bottom: 75px;
+    }
+
+    .privacy h3{
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+    .privacy-inner table{
+        display: flex;
+        border-top: 1px solid #000;
+        margin-bottom: 20px;
+    }
+    .privacy table thead tr{
+        display: flex;
+        flex-direction: column;
+    }
+    .privacy table tr{
+        height: max-content;
+    }
+    .privacy table th{
+        width: 100px;
+        height: 77px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        border-top: 0;
+        font-size: 15px;
+        font-weight: 600;
+        border-top: 1px solid #e2e2e2;
+    }
+    .privacy table th:first-child{
+        border-top: none;
+    }
+    .privacy table tbody{
+        width: calc(100% - 100px);
+    }
+    .privacy table tbody tr{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .privacy table tbody tr td{
+        width: 100%;
+        height: calc(100% / 3);
+        border-top: 1px solid #e2e2e2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding:0 15px;
+        font-size: 15px;
+        line-height: 23px;
+
+    }
+    .privacy table tr td:first-child{
+        border-top: none;
+    }
+    .privacy p{
+        font-size:13px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    .privacy-checklist{
+        margin: 42px 0 0 0;
+    }
+    .privacy-checklist li{
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 26px;
+    }
+    .privacy-checklist li p{
+        font-size: 16px;
+        line-height: 23px;
+        margin-right: 14px;
+    }
+    .age-checkbox label{
+        width: 25px;
+        height: 25px;
+    }
+    .privacy-checklist li:last-child{
+        display: block;
+        margin-bottom: 0;
+        padding-bottom: 54px;
+        border-bottom: none;
+    }
+    .privacy-checklist li:last-child p{
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .consent-radio label{
+        display: inline-flex;
+        align-items: center;
+        width: 26px;
+        height: 26px;
+        margin-right: 8px;
+    }
+    .consent-radio span{
+        display: inline-flex;
+        align-items: center;
+        vertical-align: middle;
+        margin-top: 5px;
+    }
+    .submit-btn{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+    .submit-btn{
+        width: 184px;
+        height: 54px;
+        background-color: #6945ec;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-family: "NanumSquare";
+        font-weight:400;
+        color:#fff;
+        margin: 0 auto;
+    }
+    .page-title .sec-inner{
+        max-width: calc(100vw - 40px)
+    }
+    .sec-inner{
+        max-width: calc(100vw - 40px)
+    }
+    .input-group.email{
+        flex-direction: column;
+    }
+    .input-group.email .input-group-inner span{
+        margin-bottom: 18px;
+    }
+    .input-group.tel span{
+        margin-bottom: 18px;
+    }
+    .age-checkbox label{
+        margin-right:0;
     }
 }

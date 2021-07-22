@@ -11,7 +11,6 @@ window.requestAnimFrame = function()
 		}
 	);
 }();
-
 function getRandomFloat(max) {
   return Math.random() * Math.floor(max);
 }
@@ -26,12 +25,6 @@ var guiControls = new function(){
 	this.amplitude = 25;
 	this.waveSpeed = 5;
 }
-var datGUI = new dat.GUI();
-
-datGUI.add( guiControls, 'period', 1, 100 );
-datGUI.add( guiControls, 'amplitude', 1, 100 );
-datGUI.add( guiControls, 'waveSpeed', -20, 20 );
-
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
@@ -42,8 +35,6 @@ var start = {
 	x: 0,
 	y : ( document.body.clientHeight / 2 )
 }
-
-
 
 var amplitude = 600;
 var frequency = 6;
@@ -58,8 +49,7 @@ var sinus = new CustomEase("sinus", "M0.4,181.7C292.3,67.5,380.2,1,532.2,1c215,0
 var sinusRef = new CustomEase("sinusRef", "M0.2,214.2C292.1,100,393.4,0.5,532.1,0.5s266.6,199,637.2,199s511.1-149.6,959.9-149.6 s1252.1,164.2,1759.1,164.2");
 
 var startBis = {
-	x: 50,
-	// y : ( document.body.clientHeight / 2 ) + rippleOffset
+	x: 0,
 	y : 140
 }
 
@@ -78,19 +68,13 @@ var startBis = {
       
       amplituderef = amplitude * 1 + (Math.sin(dateCoeff) * Math.random()) / dampener;
       
-      // console.log(sinus.getRatio(norm));
-    	//var y = amplituderef * Math.sin( x / guiControls.period + ( i  / 5 ) );
-      // var y = (frequency * 1.7 + (dateCoeff) * 2.5) + (amplituderef / dampener * sinus.getRatio(norm));
       var y = amplituderef * Math.sin( x / (1 + sin.getRatio(norm)) + ( i / 8 ) +  sinus.getRatio(norm));
     	ctx.lineTo( start.x + x*segments,  start.y + y);
 
     }
 
     ctx.stroke(); 
-
 }
-
-
 
 var i = 0;
 
@@ -98,7 +82,7 @@ function render(){
 	ctx.clearRect(0, 0, canvas.width, canvas.height );
   
 	draw_line( i, '60', '30', start, '2', '1', sinus );
-  draw_line( i, '90', '10', startBis, '1', '5', sinusRef );
+  draw_line( i, '30', '10', startBis, '1', '5', sinusRef );
   
   requestAnimationFrame( render );
   

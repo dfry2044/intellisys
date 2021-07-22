@@ -1,3 +1,6 @@
+.mo{
+    display: none !important;
+}
 /* header */
 header{
     position: fixed;
@@ -289,7 +292,7 @@ footer{
         height: 2px;
     }
     footer{
-        margin-top: 150px;
+        margin-top: 112px;
     }
     .footer-inner{
         max-width: 860px;
@@ -348,5 +351,112 @@ footer{
     }
     .footer-inner{
         max-width: 57.813vw;
+    }
+}
+@media all and (max-width:1024px){
+    .pc{
+        display: none !important;
+    }
+    .mo{
+        display: block !important;
+    }
+    header.sub nav{
+        display: none;
+    }
+    .header-right a{
+        display: none;
+    }
+    header h1{
+        margin-left: 20px;
+    }
+    header h1 img{
+        width: 103px
+    }
+    .header-right button{
+        background-color: transparent;
+    }
+    .header-right .hambuger-span-group{
+        width: 21px;
+        height: 17px;
+    }
+    .header-right button span{
+        height: 3px;
+        background-color: #000;
+    }
+
+    footer{
+        margin-top: 55px;
+    }
+    .fot-top{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+        border-bottom: none;
+    }
+    .fot-top .fnb ul li{
+        font-size: 14px;
+        margin-right: 0;
+        margin-bottom: 32px;
+    }
+    .fot-top .fnb ul li:first-child::after{
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 14px;
+        background-color: #d4d4d4;
+        margin: 0 18px;
+    }
+    .sns li{
+        margin-left: 40px;
+    }
+    .sns li:first-child{
+        margin-left: 0;
+    }
+    .blog i{
+        width: 29px;
+        height: 25px;
+    }
+    .face i{
+        width: 11px;
+        height: 25px;
+    }
+    .inst i{
+        width: 25px;
+        height: 25px;
+    }
+    .youtube i{
+        width: 30px;
+        height: 25px;
+    }
+    .fot-bottom{
+        padding: 0 0 48px 0;
+    }
+    .fot-bottom img{
+        display: none;
+    }
+    .fot-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .fot-bottom .fot-content li{
+        font-size: 13px;
+        line-height:21px;
+    }
+    .fot-bottom .fot-content ul{
+        flex-direction: column;
+    }
+    .fot-bottom .fot-content li:nth-child(2)::after{
+        display: none;
+        width: 50%;
+    }
+    .fot-bottom .fot-content ul:first-child{
+        flex-direction: row;
+    }
+    .footer-inner{
+        max-width: calc(100vw - 40px);
     }
 }
