@@ -8,6 +8,14 @@
         opacity:1;
     }
 }
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 /* sub common */
 .page-side{
@@ -694,6 +702,38 @@
 .input-group.email{
     display:flex;
 }
+
+/* AI Hybrid Retail */
+.a-h-r.page-visual{
+    background: url("../images/sub/visual/visual03.jpg") no-repeat top / cover;
+    background-attachment: fixed;
+}
+.a-h-r.sec-diagram{
+    margin-bottom:0;
+    padding-bottom:0;
+}
+.a-h-r.sec-diagram .diagram-group{
+    position: relative;
+    height: max-content;
+    height: 325px;
+}
+.a-h-r.sec-diagram .diagram-group img{
+    transform: none;
+    position: absolute;
+    width:100%;
+}
+.a-h-r.sec-diagram.show .diagram-group img:nth-child(1){
+    animation: fadeIn 0.75s ease forwards;
+}
+.a-h-r.sec-diagram.show .diagram-group img:nth-child(2){
+    animation: fadeIn 0.75s 0.15s ease forwards;
+}
+.a-h-r.sec-diagram.show img:nth-of-type(1){
+    animation: fadeIn-up 0.75s 0.3s ease forwards;
+}
+.a-h-r.sec-diagram.show img:nth-of-type(2){
+    animation: fadeIn-up 0.75s 0.45s ease forwards;
+}
 @media all and (max-width:1920px){
     .sec-inner{
         max-width: 1024px;
@@ -771,6 +811,9 @@
     .sec-wave-content .sub-content-wrap .sub-content-text p{
         font-size: 14px;
         line-height: 23px;
+    }
+    .a-h-r.sec-diagram .diagram-group{
+        height: 250Px;
     }
 }
 @media all and (max-width:1500px){
@@ -988,6 +1031,9 @@
         padding-bottom: 0;
         font-size: 11px;
     }
+    .a-h-r.sec-diagram .diagram-group{
+        height: 196px;
+    }
 }
 @media all and (max-width:1280px){
     .page-title .sec-inner{
@@ -1004,6 +1050,9 @@
     }
     .join-form input{
         width: 12.500vw;
+    }
+    .a-h-r.sec-diagram .diagram-group{
+        height: 13.086vw;
     }
 }
 @media all and (max-width:1024px){
@@ -1103,6 +1152,9 @@
         max-width: max-content !important;
         margin: auto;
     }
+    section.a-h-r .sec-diagram.a-h-r .swiper-container img{
+        height: 550px;
+    }
     .swiper-wrapper{
         width: max-content !important;
         width: auto;
@@ -1124,6 +1176,11 @@
     }
     .a-r-r.page-visual{
         background: url("../images/sub/visual/visual01-mo.jpg") no-repeat center / cover;
+    }
+    .a-h-r.page-visual{
+        background: url("../images/sub/visual/visual03-mo.jpg") no-repeat center / cover;
+    }
+    .page-visual{
         background-attachment:scroll !important;
     }
 
