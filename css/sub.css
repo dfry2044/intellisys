@@ -107,11 +107,11 @@
 
 .sec-move{
     position:relative;
-    height:76px;
+    height:79px;
     position:sticky;
     top:0;
     z-index:900909090909;
-    margin: 15px;
+    background-color: #fff;
 }
 .sec-move .move-btn-group{
     height:100%;
@@ -120,7 +120,6 @@
     width:100%;
     max-width:1440px;
     margin:0 auto;
-    background-color: #fff;
 }
 .sec-move .move-btn-group button{
     padding: 0 32px;
@@ -733,6 +732,70 @@
 }
 .a-h-r.sec-diagram.show img:nth-of-type(2){
     animation: fadeIn-up 0.75s 0.45s ease forwards;
+}
+
+/* company */
+.company.page-visual{
+    background: url("../images/sub/visual/visual04.jpg") no-repeat center / cover;
+    background-attachment: fixed;
+}
+.company.sec-diagram{
+    display: flex;
+    justify-content: space-between;
+    padding: 92px 50px;
+}
+.company.sec-diagram li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.company.sec-diagram img{
+    width: 138px;
+    margin: 0 auto 40px;
+}
+.company.sec-diagram h4{
+    font-size: 20px;
+    font-family: "NanumSquare";
+    font-weight: 600;
+    color: #000;
+    line-height: 29px;
+    margin-bottom: 22px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+}
+.company.sec-diagram p{
+    font-size: 16px;
+    font-family: "NanumSquare";
+    font-weight: 400;
+    color: #4f4f4f;
+    line-height: 29px;
+    opacity: 0;
+    transform: translateY(40px);
+}
+.company.sec-diagram.show img{
+    animation: fadeIn-up 0.75s ease forwards;
+}
+.company.sec-diagram.show h4{
+    animation: fadeIn-up 0.75s 0.15s ease forwards;
+}
+.company.sec-diagram.show p{
+    animation: fadeIn-up 0.75s 0.3s ease forwards;
+}
+section.company:nth-of-type(3){
+    background-color: #fafafa;
+}
+.company-content{
+    position:sticky;
+    top: 0px;
+    padding-top:160px;
+
+}
+.company-content .sec-inner{
+    max-width: calc(1440px / 2);
+}
+.space{
+    height:100vh;
 }
 @media all and (max-width:1920px){
     .sec-inner{
