@@ -81,8 +81,8 @@ var i = 0;
 function render(){
 	ctx.clearRect(0, 0, canvas.width, canvas.height );
   
-	draw_line( i, '60', '30', start, '2', '1', sinus );
-  draw_line( i, '30', '10', startBis, '1', '5', sinusRef );
+	draw_line( i, '20', '0.5', start, '1', '1', sinus );
+  draw_line( i, '30', '10', startBis, '0.5', '5', sinusRef );
   
   requestAnimationFrame( render );
   
