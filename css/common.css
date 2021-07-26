@@ -246,6 +246,9 @@ footer{
         max-width:1024px;
         padding-left: 24px;
     }
+    footer{
+        margin-top: 94px;
+    }
     .footer-inner{
         max-width:1024px;
     }
