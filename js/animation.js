@@ -3,7 +3,7 @@ var diagramImg          = document.querySelectorAll(".sec-diagram");
 var sideNav             = document.querySelectorAll(".page-side");
 var visualSec           = document.querySelectorAll(".page-visual");
 var waveText            = document.querySelectorAll(".sec-wave-content");
-var arrSection          = document.querySelectorAll("body.a-r-r section.a-r-rDiagram");
+var arrSection          = document.querySelectorAll("section.moveDiagram");
 var moveBtn             = document.querySelectorAll(".move-btn-group button");
 var winY;
 var titleTop;
@@ -51,9 +51,7 @@ $(".move-btn-group button").click(function(){
     // arrSectionTop   = el.getBoundingClientRect().top;
     var moveIdx     = $(this).index();
 
-    console.dir($("body.a-r-r section.a-r-rDiagram").eq(moveIdx).offset().top);
-
     $("html, body").animate({
-        scrollTop: $("body.a-r-r section.a-r-rDiagram").eq(moveIdx).offset().top
+        scrollTop: $("section.moveDiagram").eq(moveIdx).offset().top - 50
     },'slow')
 })

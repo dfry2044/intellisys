@@ -158,7 +158,7 @@ body.fp-viewing-4 .section:nth-child(5) .sec-text{
 body:not(.fp-viewing-4) .section:nth-child(5) .sec-text{
     opacity: 1;
     margin-top: 0;
-    animation: fadeOut-up 1s 0.3s ease forwards;
+    animation: fadeIn-up 1s 0.3s ease forwards;
 }
 body.fp-viewing-3 .section:nth-child(4) .img-group li:nth-child(1){
     animation: fadeIn 1.5s 0.7s ease forwards;
@@ -185,6 +185,12 @@ body.fp-viewing-4 .section:nth-child(5) .effect-content li:nth-child(4){
     animation: fadeIn 1s 0.9s ease forwards;
 }
 body:not(.fp-viewing-4) .section:nth-child(5) .effect-content li{
+    animation: fadeIn 1s ease forwards;
+}
+body.fp-viewing-3 .section:nth-child(5) .sec-text{
+    animation: fadeOut 1s ease forwards;
+}
+body.fp-viewing-3 .section:nth-child(5) .effect-content li{
     animation: fadeOut 1s ease forwards;
 }
 .swiper-slide{
@@ -234,19 +240,27 @@ body:not(.fp-viewing-4) .section:nth-child(5) .effect-content li{
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    opacity: 1;
-}
-.banner-text li.active{
     opacity: 0;
 }
+.banner-text li.active{
+    opacity: 1;
+}
 .banner-text li h2{
-    font-size: 60px;
+    font-size: 66px;
     font-family: "NanumSquare";
     font-weight: 600;
     color: #fff;
-    line-height: 80px;
     letter-spacing: -3px;
+    margin-bottom: 5px;
+}
+.banner-text li span{
+    font-size: 20px;
+    font-family: "NanumSquare";
+    font-weight: 600;
+    color: #fff;
+    line-height: 36px;
     margin-bottom: 65px;
+    display: block;
 }
 .banner-text li a{
     width: 192px;
@@ -568,10 +582,6 @@ body:not(.fp-viewing-4) .section:nth-child(5) .effect-content li{
     header h1{
         margin-left: 115px;
     }
-    .header-right a, button{
-        width: 62px;
-        height: 62px;
-    }
     .header-right a i{
         width: 21px;
         height: 16px;
@@ -587,7 +597,7 @@ body:not(.fp-viewing-4) .section:nth-child(5) .effect-content li{
     .banner-text li h2{
         font-size: 46px;
         line-height: 61px;
-        margin-bottom: 52px;
+        margin-bottom: 5px;
     }
     .banner-text li a{
         font-size: 12px;
@@ -734,7 +744,10 @@ body:not(.fp-viewing-4) .section:nth-child(5) .effect-content li{
     .banner-text li h2{
         font-size: 36px;
         line-height: 47px;
-        margin-bottom: 40px;
+    }
+    .banner-text li span{
+        font-size: 16px;
+        line-height: 24px;
     }
     #fp-nav ul li a span, .fp-slidesNav ul li a span{
         width: 6px !important;
@@ -917,9 +930,12 @@ body:not(.fp-viewing-4) .section:nth-child(5) .effect-content li{
     .banner-text li h2{
         font-size: 24px;
         line-height: 32px;
-        margin-bottom: 25px;
         letter-spacing: 0.00000005px;
         word-spacing: 0.0px;
+    }
+    .banner-text li span{
+        font-size: 13px;
+        line-height: 20px;
     }
     .banner-text li a{
         width: 130px;

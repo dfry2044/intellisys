@@ -1,3 +1,23 @@
+@keyframes fadeIn-left{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes fadeOut-left{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+main{
+    position: relative;
+    z-index: 0;
+}
 .mo{
     display: none !important;
 }
@@ -51,6 +71,9 @@ header nav{
     top: 50%;
     transform: translate(-50%,-50%);
     height: 100%;
+    transition: 0.5s ease;
+    opacity: 1;
+    visibility: visible;
 }
 header nav ul{
     height: 100%;
@@ -133,6 +156,9 @@ footer{
     background-color: #fff;
     border-top: 1px solid #dfe1e2;
     margin-top: 200px;
+}
+.main footer{
+    margin-top: 0;
 }
 .footer-inner{
     max-width: 1500px;
@@ -235,6 +261,107 @@ footer{
     margin-top: 30px;
 }
 
+/* menu */
+.menu{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 10;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    transition: 1s ease;
+}
+.menu .sec-inner{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.menu .sec-inner > li{
+    width: calc(100% / 4);
+    height: 100%;
+    padding-top: 300px; 
+    padding-left: 60px;
+    border-right: 1px solid #eeeeee;
+    overflow: hidden;
+}
+.menu .sec-inner > li:first-child{
+    border-left: 1px solid #eeeeee;
+}
+.menu .sec-inner > li .menu-title{
+    font-size: 30px;
+    font-family: "Circular Std Medium";
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.menu .sec-inner > li ul li{
+    margin-bottom: 26px;
+    font-size: 18px;
+    font-family: "Circular Std Book";
+    font-weight: 500;
+    color: #535353;
+    line-height: 1.5;
+    transform: translateX(-100%);
+}
+.menu .sec-inner > li ul li a{
+    position: relative;
+}
+.menu .sec-inner > li ul li a::after{
+    content: "";
+    height: 1px;
+    display: block;
+    bottom: -5px;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease;
+    width: 0;
+    position: absolute;
+}
+.menu .sec-inner > li ul li:hover a::after{
+    width: 100%;
+}
+.menu .sec-inner > li ul li{
+    animation: fadeOut-left 1s ease forwards;
+}
+.menu.show .sec-inner > li:nth-of-type(1) ul li{
+    animation: fadeIn-left 1s 0.5s ease forwards;
+}
+.menu.show .sec-inner > li:nth-of-type(2) ul li{
+    animation: fadeIn-left 1s 0.65s ease forwards;
+}
+.menu.show .sec-inner > li:nth-of-type(3) ul li{
+    animation: fadeIn-left 1s 0.8s ease forwards;
+}
+.menu.show .sec-inner > li:nth-of-type(4) ul li{
+    animation: fadeIn-left 1s 0.95s ease forwards;
+}
+.menu.show{
+    top: 0;
+}
+header.menu-open h1 .red{
+    opacity: 1;
+}
+header .hambuger-span-group span{
+    transition: 0.3s ease;
+    transform-origin: left center;
+}
+header.menu-open .hambuger-span-group span:nth-child(1){
+    transform: rotate(45deg);
+    transform-origin: left;
+}
+header.menu-open .hambuger-span-group span:nth-child(2){
+    opacity: 0;
+    width: 0;
+}
+header.menu-open .hambuger-span-group span:nth-child(3){
+    transform: rotate(-45deg);
+}
+header.menu-open nav{
+    opacity: 0;
+    visibility: hidden;
+}
 @media all and (max-width:1920px){
     header h1{
         margin-left: 115px;
@@ -245,6 +372,13 @@ footer{
     header.sub nav{
         max-width:1024px;
         padding-left: 24px;
+    }
+    .header-right{
+        height: 100%;
+    }
+    .header-right a, .header-right button{
+        width: 80px;
+        height: 100%;
     }
     footer{
         margin-top: 94px;
@@ -340,6 +474,19 @@ footer{
         font-size: 9px;
         margin-top: 20px;
     }
+
+    .menu .sec-inner > li{
+        padding-top: 180px;
+        padding-left: 35px;
+    }
+    .menu .sec-inner > li .menu-title{
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .menu .sec-inner > li ul li{
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
 }
 @media all and (max-width:1280px){
     header.sub nav{
@@ -365,6 +512,9 @@ footer{
     header.sub nav{
         display: none;
     }
+    header nav{
+        display: none;
+    }
     .header-right a{
         display: none;
     }
@@ -380,6 +530,12 @@ footer{
     .header-right .hambuger-span-group{
         width: 21px;
         height: 17px;
+    }
+    .main .header-right button span{
+        background-color: #fff;
+    }
+    .main:not(.fp-viewing-0) .header-right button span{
+        background-color: #1f1247;
     }
     .header-right button span{
         height: 3px;
@@ -460,5 +616,93 @@ footer{
     }
     .footer-inner{
         max-width: calc(100vw - 40px);
+    }
+
+    .main header.menu-open .header-right button span{
+        background-color: #000;
+    }
+    .menu{
+        background-color: transparent;
+        top: 0;
+        left: 0;
+    }
+    .menu.show{
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .menu .sec-inner{
+        position: relative;
+        max-width: calc(100% - 35px);
+        right: -100%;
+        top:0;
+        transition: 1s ease;
+        background-color: #fff;
+        margin: 0;
+        margin-left: auto; 
+        flex-direction: column;
+    }
+    .menu.show .sec-inner{
+        right: 0;
+    }
+    .menu .sec-inner > li{
+        padding: 0;
+        height: auto;
+        border: none;
+        margin-left: auto;
+        width: 35%;
+    }
+    .menu .sec-inner > li:nth-of-type(1){
+        margin-top: 164px;
+    }
+    .menu .sec-inner > li .menu-title{
+        font-size: 23px;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+    .menu .sec-inner > li .menu-title::after{
+        content: "";
+        position:absolute;
+        display: inline-block;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background-color: #000;
+        transition: 0.3s ease;
+    }
+    .menu .sec-inner > li .menu-title.show::after{
+        width: 100%;
+    }
+    .menu .sec-inner > li .menu-title.show ~ li{
+        visibility: visible;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
+    .menu .sec-inner > li ul li{
+        margin-bottom: 16px;
+        transition: 0.5s ease;
+    }
+    .menu .sec-inner > li ul li:not(.menu-title){
+        visibility: hidden;
+        line-height: 0;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+    .menu p{
+        font-size: 17px;
+        font-family: "Circular Std Medium";
+        font-weight: 500;
+        color: #000;
+        position:absolute;
+        left: 34px;
+        top: 64px;
+    }
+    .menu .sec-inner > li ul li a::after{
+        display:none;
+    }
+    header.menu-open h1 .red,
+    header.menu-open h1 .white,
+    header.menu-open h1 .purple{
+        opacity: 0;
     }
 }
