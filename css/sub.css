@@ -111,8 +111,9 @@
     height:79px;
     position:sticky;
     top:0;
-    z-index:900909090909;
+    z-index:9999999999999999999999999999999999;
     background-color: #fff;
+    transition: 0.3s ease;
 }
 .sec-move .move-btn-group{
     height:100%;
@@ -1333,6 +1334,45 @@ section.a-s-c .sec-diagram-sub.show li:nth-of-type(4) img{
 section.a-s-c:last-of-type .sec-diagram{
     background-color:#f9fafb;
 }
+
+/* map */
+.wrap_controllers{
+    display: none;
+}
+.map .page-title{
+    padding-bottom: 60px;
+}
+.map .page-title h2{
+    margin-bottom: 0;
+}
+.root_daum_roughmap_landing{
+    width: 100% !important;
+}
+.map-content{
+    padding: 40px 0;
+    border-bottom: 1px solid #000;
+}
+.map-content li{
+    display: flex;
+    align-items: center;
+}
+.map-content li:nth-child(2){
+    margin: 20px 0;
+}
+.map-content li span{
+    font-size: 18px;
+    font-family: "Noto Sans Kr";
+    font-weight: 600;
+    color: #000;
+    min-width: 106px;
+}
+.map-content li p{
+    font-size: 18px;
+    font-family: "Noto Sans Kr";
+    font-weight: 400;
+    color:#000;
+}
+
 @media all and (max-width:1920px){
     .sec-inner{
         max-width: 1024px;
@@ -1349,7 +1389,7 @@ section.a-s-c:last-of-type .sec-diagram{
     .sec-title h3{
         min-width:394px;
         font-size: 38px;
-        font-weight: 600;
+        font-weight: 800;
     }
     .sec-wave .sec-title{
         padding: 125px 0 70px 0;
@@ -1910,6 +1950,23 @@ section.a-s-c:last-of-type .sec-diagram{
     section.a-s-c:nth-of-type(3) .sec-diagram-sub{
         padding-bottom:0;
     }
+
+    .root_daum_roughmap{
+        height: 326px;
+    }
+    .root_daum_roughmap .wrap_map{
+        height: 100% !important;
+    }
+    .map-content{
+        padding: 24px 0;
+    }
+    .map-content li span{
+        font-size: 12px;
+        min-width: 62px;
+    }
+    .map-content li p{
+        font-size: 12px;
+    }
 }
 @media all and (max-width:1280px){
     .page-title .sec-inner{
@@ -1967,7 +2024,6 @@ section.a-s-c:last-of-type .sec-diagram{
     }
     .page-title h2{
         font-size: 30px;
-        font-weight: 600;
         line-height: 30px;
         margin-bottom: 26px;
     }
@@ -1988,17 +2044,17 @@ section.a-s-c:last-of-type .sec-diagram{
         margin: 0 auto;
     }
     .sec-move{
-        height: 40px;
+        height: 64px;
         margin: 0;
         margin-bottom: 15px;
+        overflow-x: scroll;
     }
     .sec-move .move-btn-group{
         align-items: flex-start;
         height: max-content;
-        padding: 7px ;
-    }
-    .sec-move .move-btn-group{
-        max-width: 100%;
+        padding: 7px 20px;
+        max-width: none;
+        width: max-content;
     }
     .sec-move .move-btn-group button{
         font-size: 12px;
@@ -2465,5 +2521,39 @@ section.a-s-c:last-of-type .sec-diagram{
     .company-subContent .subContent-content p{
         line-height: 1.5;
         margin-top: -3px;
+    }
+
+    .root_daum_roughmap{
+        height: 80vw;
+    }
+    .map-content{
+        padding: 14px 0 37px;
+        border-bottom: none;
+        max-width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+    .map footer{
+        margin-top: 0;
+    }
+    .map .sec-inner{
+        max-width: 100%;
+    }
+    .map-content li{
+        height: 90px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .map-content li:nth-child(2){
+        border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+        margin: 0;
+    }
+    .map-content li span{
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    .map-content li p{
+        font-size: 14px;
     }
 }

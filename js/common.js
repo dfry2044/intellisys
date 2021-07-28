@@ -13,14 +13,17 @@ $(window).scroll(function(){
 var menuOpenBtn     = $(".hambuger-open-btn");
 var menu            = $(".menu");
 var menuTitle       = $(".menu .sec-inner > li ul li.menu-title");
+var body            = $("body");
 
 menuOpenBtn.click(function(){
     if(menu.hasClass("show")){
         menu.removeClass("show");
         header.removeClass("menu-open");
+        body.removeClass("menu-open");
     }else{
         menu.addClass("show");
         header.addClass("menu-open");
+        body.addClass("menu-open");
     }
 })
 

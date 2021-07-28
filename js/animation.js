@@ -54,4 +54,10 @@ $(".move-btn-group button").click(function(){
     $("html, body").animate({
         scrollTop: $("section.moveDiagram").eq(moveIdx).offset().top - 50
     },'slow')
+
+    var _scrollX = $(".move-btn-group").closest(".sec-move").scrollLeft();
+
+    $(".move-btn-group").closest(".sec-move").animate({
+        scrollLeft : $(this).offset().left
+    },1000)
 })
