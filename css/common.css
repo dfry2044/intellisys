@@ -266,7 +266,7 @@ footer{
     position: fixed;
     top: -100%;
     left: 0;
-    z-index: 10;
+    z-index: -1;
     background-color: #fff;
     width: 100vw;
     height: 100vh;
@@ -339,6 +339,7 @@ footer{
 }
 .menu.show{
     top: 0;
+    z-index: 10;
 }
 header.menu-open h1 .red{
     opacity: 1;
@@ -390,7 +391,7 @@ header.menu-open nav{
     visibility: visible;
 }
 .popup .popup-top{
-    padding: 20px 26px 45px;
+    padding: 20px 26px 45px 26px;
     background-color: #f9f9f9;
 }
 .popup .popup-top img{
@@ -803,7 +804,40 @@ header.menu-open nav{
     }
     header.menu-open h1 .red,
     header.menu-open h1 .white,
-    header.menu-open h1 .purple{
+    header.menu-open h1 .purple,
+    header.menu-open h1 img{
         opacity: 0;
+    }
+
+    /* popup */
+    .popup .popup-inner{
+        width: 300px;
+    }
+    .popup .popup-top{
+        padding: 16px 16px 30px 16px;
+    }
+    .popup .popup-top .popup-close-btn{
+        width: 22px;
+        height: 22px;
+    }
+    .popup .popup-top h2{
+        font-size: 20px;
+    }
+    .popup .popup-content{
+        padding: 22px 26px;
+    }
+    .popup .popup-content h3{
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 16px;
+        font-weight: 800;
+    }
+    .popup .popup-content li{
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    .popup .popup-content ul{
+        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
 }

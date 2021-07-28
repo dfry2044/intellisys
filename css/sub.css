@@ -774,6 +774,7 @@
     line-height: 29px;
     opacity: 0;
     transform: translateY(40px);
+    text-align: center;
 }
 .company.sec-diagram.show img{
     animation: fadeIn-up 0.75s ease forwards;
@@ -1467,7 +1468,7 @@ section.a-s-c:last-of-type .sec-diagram{
         line-height: 22px;
     }
     .company-people li .people-content{
-        padding: 30px 22px;
+        padding: 30px 0 30px 22px;
     }
     .company-people ul:first-child li:nth-child(even){
         margin-top: 132px;
@@ -1476,7 +1477,7 @@ section.a-s-c:last-of-type .sec-diagram{
         margin-top: -86px;
     }
     .company-people ul:first-child{
-        margin-bottom: 66px;
+        margin-bottom: -66px;
     }
     .company-people ul:last-child li:nth-child(odd){
         margin-top: 132px;
@@ -1526,6 +1527,26 @@ section.a-s-c:last-of-type .sec-diagram{
     .case.sec-diagram:not(.sec-diagram-group){
         padding: 25px 0;
         margin-bottom: 60px;
+    }
+    .company-people li .people-content h4{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .company-people li .people-content h5{
+        font-size: 13px;
+    }
+    .company-people > ul:first-child .people-content em{
+        width: 50px;
+    }
+    .company-people li .people-content em{
+        font-size: 13px;
+        width: 110px;
+    }
+    .company-people li .people-content ul li{
+        font-size: 12px;
+    }
+    .company-people li .people-content ul li::before{
+        margin-right: 8px;
     }
 
     .prj-content{
@@ -1816,19 +1837,23 @@ section.a-s-c:last-of-type .sec-diagram{
         padding-right: 0;
     }
     .company-people ul{
-        grid-template-columns: repeat(2, 174px);
+        grid-template-columns: repeat(2, 200px);
         grid-column-gap: 50px;
     }
     .company-people li{
         height:222px;
     }
     .company-people li .people-content{
-        padding: 20px;
+        padding: 20px 15px;
     }
     .company-people li .people-content p{
         font-size:11px;
         line-height:18px;
     }
+    .company-people li .people-content li{
+        word-break: keep-all;
+    }
+    
     .case.sec-diagram:not(.sec-diagram-group){
         max-width: calc(100% - 304px);
     }
@@ -1919,6 +1944,10 @@ section.a-s-c:last-of-type .sec-diagram{
     }
     .prj-content+.prj-text{
         margin-top: -230px;
+    }
+
+    .company-content-group .sec-inner{
+        max-width: 830px;
     }
     
 }
@@ -2264,5 +2293,177 @@ section.a-s-c:last-of-type .sec-diagram{
     }
     .age-checkbox label{
         margin-right:0;
+    }
+
+    /* company */
+    .company.sec-diagram{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        padding-bottom: 25px;
+    }
+    .company.sec-diagram li{
+        flex-direction: row;
+    }
+    .company.sec-diagram img{
+        margin: 0;
+    }
+    .company.sec-diagram h4{
+        text-align: left;
+        margin-bottom: 6px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .company.sec-diagram p{
+        font-size: 13px;
+    }
+    .company-diagram-text{
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .company.sec-diagram img{
+        width: 85px;
+    }
+    .company.sec-diagram li{
+        width: 100%;
+        padding: 23px 0;
+        border-bottom: 1px solid #f3f3f3;
+        justify-content:flex-start;
+    }
+    .company.sec-diagram li:last-child{
+        padding: 23px 0;
+        border-bottom: none
+    }
+    .company .sec-title{
+        border-bottom: 1px solid #f3f3f3;
+    }
+    .company-content{
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 33px;
+    }
+    .company-people{
+        margin: 0;
+    }
+    .company-content-group .sec-inner{
+        max-width: calc(100vw - 40px);
+    }
+    .company-content h3{
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+    .company-content p{
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 24px;
+    }
+    .popup-btn-group{
+        display: flex;
+        justify-content: space-between;
+    }
+    .popup-btn-group button{
+        width: calc(50% - 4px);
+        height: 54px;
+        text-align: left;
+        font-size: 13px;
+        line-height: 1.5;
+        padding: 0 16px;
+    }
+    .company-people ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin: 0 !important;
+    }
+    .company-people li{
+        width: calc(100% - 22px);
+        margin: 0 0 20px 0!important;
+    }
+    .company-people li .people-content ul li:last-child{
+        margin-bottom: 0 !important;
+    }
+    .company-people li span{
+        left: -8px;
+        font-weight: 800;
+    }
+    .company-people li .people-content{
+        padding: 34px 38px 48px 38px;
+    }
+    .company-people li .people-content h4{
+        font-size: 18px;
+        margin-bottom: 24px;
+        font-weight: 800;
+    }
+    .company-people li .people-content h5{
+        margin-top: 20px 0 14px 0;
+        font-size: 14px;
+    }
+    .company-people li .people-content em{
+        font-size: 14px;
+        margin-left: 5px;
+    }
+    .company-people li .people-content ul li{
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+    .company-people li .people-content em{
+        width: max-content !important;
+    }
+    .company-content-group{
+        padding-bottom: 55px;
+        margin-bottom: 34px;
+    }
+    .company-subContent h3{
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 30pxv;
+    }
+    .company-subContent .sec-inner > ul{
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .company-subContent .sec-inner > ul > li{
+        width: 100%;
+    }
+    .company-subContent .sec-inner > ul > li:first-child{
+        margin-bottom: 16px;
+    }
+    .company-subContent h4{
+        height: 34px;
+        font-size:13px;
+    }
+    .company-subContent .subContent-content{
+        padding: 28px 20px;
+        height: max-content;
+    }
+    .company-subContent .subContent-content i{
+        display: none;
+    }
+    .company-subContent .subContent-content li{
+        font-size: 14px;
+        margin-bottom: 12px;
+        align-items: flex-start;
+    }
+    .company-subContent .subContent-content li::before{
+        content: "";
+        width: 3px;
+        height: 3px;
+        background: #684aec;
+        display:inline-block;
+        margin-right: 6px;
+        margin-top: 5px;
+    }
+    .company-subContent .subContent-content span{
+        width: max-content;
+        word-break: keep-all;
+    }
+    .company-subContent .subContent-content p{
+        line-height: 1.5;
+        margin-top: -3px;
     }
 }
