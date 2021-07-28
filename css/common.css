@@ -362,6 +362,107 @@ header.menu-open nav{
     opacity: 0;
     visibility: hidden;
 }
+
+/* popup */
+.technology-popup .popup-inner{
+    width: 630px;
+}
+.school-popup .popup-inner{
+    width: 500px;
+}
+.popup{
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999999999999999999999999999999999999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+}
+.popup.show{
+    opacity: 1;
+    visibility: visible;
+}
+.popup .popup-top{
+    padding: 20px 26px 45px;
+    background-color: #f9f9f9;
+}
+.popup .popup-top img{
+    margin: 0 auto 25px;
+    display: block;
+}
+.popup .popup-top h2{
+    font-size: 30px;
+    font-family: "NanumSquare";
+    font-weight: 700;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.popup .popup-top .popup-close-btn{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+.popup .popup-top .popup-close-btn i{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url("../images/icon/ico-close-black.png") no-repeat center / cover;
+}
+.popup .popup-content{
+    background-color: #fff;
+    padding: 50px 60px;
+}
+.popup .popup-content h3{
+    font-size: 24px;
+    font-family: "NanumSquare";
+    font-weight: 500;
+    color: #684aec;
+    line-height: 1;
+    margin-bottom: 24px;
+}
+.popup .popup-content ul{
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 34px;
+    margin-bottom: 34px;
+}
+.popup .popup-content ul:last-child{
+    border-bottom: none;
+    padding-bottom:  0px;
+    margin-bottom: 0px;
+}
+.popup .popup-content li{
+    font-size: 16px;
+    font-family: "Noto Sans Kr";
+    font-weight: 500;
+    color: #272727;
+    line-height: 1;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.popup .popup-content li::before{
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #684aec;
+    margin-right: 12px;
+}
+.popup .popup-content li:last-child{
+    margin-bottom: 0px;
+}
 @media all and (max-width:1920px){
     header h1{
         margin-left: 115px;

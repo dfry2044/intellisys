@@ -40,3 +40,32 @@ menuTitle.click(function(){
         $(this).addClass("show")
     }
 })
+
+var popup               = $(".popup");
+var popupOepnBtn        = $(".popup-open-btn");
+var popupCloseBtn       = $(".popup-close-btn");
+
+var popupArray = [
+     "technology"
+    ,"school"
+];
+
+popupOepnBtn.click(openPopup);
+popupCloseBtn.click(closePopup);
+
+function openPopup(event){
+    var target = $(event.target);
+    var targetClass = target[0].classList[1];
+    
+    popupArray.forEach(function(el, index, arr2){
+        if(targetClass == el){
+            popup.eq(index).addClass("show");
+        }else{
+            return false;
+        }
+    })
+}
+
+function closePopup(event){
+    popup.removeClass("show");
+}
