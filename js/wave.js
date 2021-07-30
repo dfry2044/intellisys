@@ -1,8 +1,9 @@
+// 웨이브가 들어가는 페이지 공통 애니메이션
 window.requestAnimFrame = function()
 {
 	return (
 		window.requestAnimationFrame       || 
-		window.webkitRequestAnimationFrame || 
+		window.webkitRequestAnimationFrame || 	
 		window.mozRequestAnimationFrame    || 
 		window.oRequestAnimationFrame      || 
 		window.msRequestAnimationFrame     || 

@@ -1,3 +1,4 @@
+// 메인 페이지 인트로 배너 부분 슬라이드 애니메이션
 var interleaveOffset = 0.5;
 
 var swiperOptions = {

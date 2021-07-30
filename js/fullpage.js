@@ -1,3 +1,4 @@
+// 메인 페이지 풀 페이지 기능
 $(document).ready(function(){
     var countArray = [300, 18, 12, 90];
     var countObject = {

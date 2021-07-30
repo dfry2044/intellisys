@@ -201,6 +201,10 @@ body.fp-viewing-3 .section:nth-child(5) .sec-text{
 body.fp-viewing-3 .section:nth-child(5) .effect-content li{
     animation: fadeOut 1s ease forwards;
 }
+section.section:nth-child(3) .fp-scroller{
+    height: 100%;
+    
+}
 .swiper-slide{
     overflow: hidden;
     width: 100vw !important;

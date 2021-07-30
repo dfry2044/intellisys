@@ -1,3 +1,4 @@
+// 스크롤 시 헤더 애니메이션
 var header = $("header");
 
 $(window).scroll(function(){
@@ -10,6 +11,7 @@ $(window).scroll(function(){
     }
 })
 
+// 햄버거 메뉴 애니메이션
 var menuOpenBtn     = $(".hambuger-open-btn");
 var menu            = $(".menu");
 var menuTitle       = $(".menu .sec-inner > li ul li.menu-title");
@@ -44,10 +46,12 @@ menuTitle.click(function(){
     }
 })
 
+// 각 팝업 별로 클릭 시 해당 팝업 열림/닫힘 코드
 var popup               = $(".popup");
 var popupOepnBtn        = $(".popup-open-btn");
 var popupCloseBtn       = $(".popup-close-btn");
 
+// 팝업이 추가 될 수 있을 상황에 대비해 배열로 팝업 이름 작성
 var popupArray = [
      "technology"
     ,"school"
