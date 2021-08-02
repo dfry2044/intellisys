@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/sub.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <title>IntelliSys | Inquire</title>
+</head>
+<body>
+    <header class="sub">
+        <h1>
+            <a href="./index.html">
+                <img src="./images/common/logo-black.png" alt="logo" class="black">
+                <img src="./images/common/logo-red.png" alt="logo" class="red">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./company.html">company</a>
+                </li>
+                <li>
+                    <a href="./ai-hybrid-retail.html">service</a>
+                </li>
+                <li>
+                    <a href="./ai-retail-recommendation.html">product</a>
+                </li>
+                <li>
+                    <a href="./inquire.html">contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="mailto:contact@intellisys.co.kr">
+                <i></i>
+            </a>
+            <button class="hambuger-open-btn">
+                <div class="hambuger-span-group">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </header>
+    <main class="inquire">
+        <aside class="page-side">
+            <ul>
+                <li class="active">
+                    <a href="./inquire.html">
+                        문의하기
+                    </a>
+                </li>
+                <li>
+                    <a href="./map.html">
+                        찾아오시는길
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="page-title">
+            <div class="sec-inner">
+                <h2 class="center">
+                    문의하기
+                </h2>
+                <P>
+                    인텔리시스는 문의하기 접수 및 처리를 위해 아래와 같이 개인정보를 수집 이용하고자 합니다.
+                    <br>
+                    내용을 자세히 읽으신 후 동의 여부를 체크하여 주시기 바랍니다.
+                </P>
+            </div>
+        </div>
+        <section class="privacy">
+            <div class="sec-inner">
+                <div class="privacy-inner">
+                    <h3>개인정보 수집 이용 내역</h3>
+                    <table>
+                        <thead>
+                            <th>항목</th>
+                            <th>수집목적</th>
+                            <th>보유기간</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="left">
+                                    [필수] 이름, 이메일또는 연락처
+                                    <br>
+                                    [선택] 회사
+                                </td>
+                                <td>
+                                    문의처리 접수 및 처리
+                                </td>
+                                <td>
+                                    <strong>접수 이후 최대 1개월 보관</strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>※위의 개인정보 수집 이용에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 문의하기 접수가 불가합니다.</p>
+                    <p>※사업문의 외 불편/불만 관련 사항은 접수하지 않습니다.</p>
+                    <ul class="privacy-checklist">
+                        <li class="age-checkbox">
+                            <p>만 14세 이상입니다.</p>
+                            <input type="checkbox" id="age-checkbox1">
+                            <label for="age-checkbox1">
+                                <i></i>
+                            </label>
+                        </li>
+                        <li class="consent-radio">
+                            <p>위와 같이 개인정보를 
+                                <br class="mo">
+                                수집 이용하는데 동의하십니까?</p>
+                            <input type="radio" id="consent-radio1" name="consent-radio">
+                            <label for="consent-radio1">
+                                <i></i>
+                            </label>
+                            <span>동의</span>
+                            <input type="radio" id="consent-radio2" name="consent-radio">
+                            <label for="consent-radio2">
+                                <i></i>
+                            </label>
+                            <span>동의안함</span>
+                        </li>
+                    </ul>
+                    <button class="submit-btn">등록하기</button>
+                </div>
+                <form action="#" method="POST" name="join-form" class="join-form">
+                    <div class="form-sub-text">
+                        <p class="essential-before">
+                            필수입력표시는 필수 입력 항목
+                        </p>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="essential-after">
+                                이름
+                            </span>
+                            <label for="nameInput"></label>
+                            <input type="text" name="name" id="nameInput" placeholder="이름을 입력하세요.">
+                        </li>
+                        <li>
+                            <span class="essential-after">
+                                이메일
+                            </span>
+                            <div class="input-group email">
+                                <div class="input-group-inner">
+                                    <input type="text">
+                                    <span>@</span>
+                                    <input type="text">
+                                </div>
+                                <select name="email" id="emailSelect">
+                                    <option value="1">직접입력</option> 
+                                    <option value="naver.com">naver.com</option> 
+                                    <option value="hanmail.net">hanmail.net</option> 
+                                    <option value="hotmail.com">hotmail.com</option> 
+                                    <option value="nate.com">nate.com</option> 
+                                    <option value="yahoo.co.kr">yahoo.co.kr</option> 
+                                    <option value="empas.com">empas.com</option> 
+                                    <option value="dreamwiz.com">dreamwiz.com</option>
+                                    <option value="freechal.com">freechal.com</option> 
+                                    <option value="lycos.co.kr">lycos.co.kr</option> 
+                                    <option value="korea.com">korea.com</option> 
+                                    <option value="gmail.com">gmail.com</option> 
+                                    <option value="hanmir.com">hanmir.com</option> 
+                                    <option value="paran.com">paran.com</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                연락처      
+                            </span>
+                            <div class="input-group tel">
+                                <input type="tel" name="phone1">
+                                <span>-</span>
+                                <input type="tel" name="phone2">
+                                <span>-</span>
+                                <input type="tel" name="phone3">
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                회사이름
+                            </span>
+                            <label for="companyInput"></label>
+                            <input type="text" name="name" id="companyInput" placeholder="회사이름을 입력하세요.">
+                        </li>
+                        <li>
+                            <span>
+                                직위/직급
+                            </span>
+                            <label for="positionInput"></label>
+                            <input type="text" name="name" id="positionInput" placeholder="직위/직급을 입력하세요.">
+                        </li>
+                        <li>
+                            <span class="essential-after">
+                                제목
+                            </span>
+                            <label for="titleInput"></label>
+                            <input type="text" name="name" id="titleInput" placeholder="제목을 적어주세요.">
+                        </li>
+                        <li class="contentTextArea">
+                            <span class="essential-after">
+                                내용
+                            </span>
+                            <label for="contentTextArea"></label>
+                            <textarea name="contentTextArea" id="contentTextArea" placeholder="내용을 적어주세요."></textarea>
+                        </li>
+                        <li class="fileInput">
+                            <span>
+                                첨부파일
+                            </span>
+                            <div class="input-group">
+                                <label for="fileInput" class="file">
+                                    <p>첨부 파일이 없습니다.</p>
+                                    <input type="file" id="fileInput">
+                                    <span class="file-custom">파일선택</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="submit-btn">
+                            <input type="submit" value="등록하기">
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="section fp-auto-height">
+        <div class="footer-inner">
+            <div class="fot-top">
+                <ul class="sns">
+                    <li>
+                        <a href="#" class="blog">
+                            <i></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="face">
+                            <i></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="inst">
+                            <i></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="youtube">
+                            <i></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fot-bottom">
+                <img src="./images/common/logo-gray.png" alt="logo-gray">
+                <div class="fot-content">
+                    <ul class="pc">
+                        <li> (주)인텔리시스 </li>
+                        <li> 대표이사 : 박은영, 박성찬 </li>
+                        <li> 서울 관악구 관악로 1, 138동 111, 112, 113 호 </li>
+                    </ul>
+                    <div class="mo">
+                        <ul>
+                            <li>(주)인텔리시스</li>
+                            <li>대표이사 : 박은영, 박성찬</li>
+                        </ul>
+                        <ul>
+                            <li>서울 관악구 관악로 1, 138동 111, 112, 113 호</li>
+                        </ul>
+                    </div>
+                    <ul>
+                        <li> 사업자등록번호 329-81-00803 </li>
+                        <li> 문의 contact@intellisys.co.kr  </li>
+                    </ul>
+                    <p class="copy">
+                        Copyright&copy;2021 Intellisys
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="menu">
+        <ul class="sec-inner">
+            <p class="mo">
+                IntelliSys
+            </p>
+            <li>
+                <ul>
+                    <li class="menu-title">
+                        <a href="./company.html">company</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="menu-title">service</li>
+                    <li>
+                        <a href="./ai-hybrid-retail.html">
+                            AI Hybrid Retail
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./fitzme.html">
+                            FITZME
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./case.html">
+                            적용사례
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./project.html">
+                            주요프로젝트
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="menu-title">product</li>
+                    <li>
+                        <a href="./ai-retail-recommendation.html">
+                            AI Retail
+                            <br>
+                            Recommendation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./ai-style-curation.html">
+                            AI Style Curation
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="menu-title">contact</li>
+                    <li>
+                        <a href="./inquire.html">문의하기</a>
+                    </li>
+                    <li>
+                        <a href="./map.html">찾아오시는길</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="./js/common.js"></script>
+    <script src="./js/animation.js"></script>
+</body>
+</html>

@@ -4,21 +4,462 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery.fullpage.min.css">
+    <script src="./plugin/js/scrolloverflow.min.js"></script>
+    <script src="./plugin/js/jquery.fullpage.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js" integrity="sha512-FzESM/E7XJBqcJyrXa08gRcpp5rDHO661C0L3vH4NsZfUWUsjN4+t6Lg8h+e8TMR2aYijIrcT+CPGq7tSugRzA==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css" integrity="sha512-/AilQf/shuEGfh8c3DoIqcIqHZCKpiImSyt+fxIKJphHiNa6QMPb6AbDly6rkjmGr/5OZd35JtvVkbEKnCZO+A==" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js" integrity="sha512-XOpdFagEEv9XMxN/2EdvFL/PfGtFDjX+AkRznsFHDtdC05YWdkMnz5JZUfrbnEabOQaMc7YNTl2xPbOu3J858Q==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+
+    <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
 
     <title>IntelliSys | main</title>
 </head>
-<body>
-    
-
+<body class="main">
+    <header>
+        <h1>
+            <a href="./index.html">
+                <img src="./images/common/logo.png" alt="logo" class="white">
+                <img src="./images/common/logo-purple.png" alt="logo" class="purple">
+                <img src="./images/common/logo-red.png" alt="logo" class="red">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./company.html">company</a>
+                </li>
+                <li>
+                    <a href="./ai-hybrid-retail.html">service</a>
+                </li>
+                <li>
+                    <a href="./ai-retail-recommendation.html">product</a>
+                </li>
+                <li>
+                    <a href="./inquire.html">contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="mailto:contact@intellisys.co.kr">
+                <i></i>
+            </a>
+            <button class="hambuger-open-btn">
+                <div class="hambuger-span-group">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </header>
+    <main id="fullpage">
+        <section class="section swiper-container intro-slide">
+            
+            <div class="sec-inner">
+                <div class="banner-text">
+                    <ul>
+                        <li class="banner-slide-text active">
+                            <h2>
+                                AI 맞춤형 
+                                <br class="mo">
+                                고객추천 솔루션
+                            </h2>
+                            <span>
+                                고객의 온라인 행동과 라이프스타일을
+                                <br>
+                                바탕으로 추천합니다.
+                            </span>
+                            <a href="#">
+                                솔루션 문의하기
+                                <i></i>
+                            </a>
+                        </li>
+                        <li class="banner-slide-text">
+                            <h2>
+                                고객 활동이력 및 라이프스타일
+                                <br>
+                                분석을 통한 AI 맞춤형
+                                <br>
+                                고객 추천 서비스
+                            </h2>
+                            <a href="./inquire.html">
+                                솔루션 문의하기
+                                <i></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="swiper-wrapper">
+                <div class="banner-slide swiper-slide">
+                    <div class="slide-inner">
+                        <img src="./images/main/bg/bg1.jpg" alt="bg">
+                    </div>
+                </div>
+                <div class="banner-slide swiper-slide">
+                    <div class="slide-inner">
+                        <img src="./images/main/bg/bg2.jpg" alt="bg">
+                    </div>
+                </div>
+                
+            </div>
+            <button class="down-btn"><i></i></button>
+        </section>
+        <section class="section">
+            <img src="./images/main/graphic/people01.png" alt="people01" class="graphic-people">
+            <div class="object-group">
+                <img src="./images/object/pie01.png" alt="pie">
+                <img src="./images/object/pie02.png" alt="pie">
+                <img src="./images/object/circle01.png" alt="circle">
+            </div>
+            <div class="sec-text center">
+                <p>인텔리시스는</p>
+                <h2>
+                    <span class="gray">
+                        서울대 컴퓨터공학부의
+                        <br>
+                        선도적인 AI 인력들이 독보적인 기술력을
+                    </span>
+                    <br>
+                    <span class="black">
+                        바탕으로 이커머스의 초개인화 서비스를
+                        <br>
+                        지원하는 인텔리시스 입니다.
+                    </span>
+                </h2>
+                <a href="./company.html" class="black-link">회사소개바로가기</a>
+            </div>
+        </section>
+        <section class="section">
+            <div class="sec-inner">
+                <div class="sec-text left">
+                    <p>인텔리시스 제품특징</p>
+                    <h2>
+                        <span class="black">
+                            개인의 행동이력, 라이프 스타일을
+                            <br>
+                            바탕으로 정교하게 학습된 AI 기술을
+                        </span>
+                        <br>
+                        <span class="gray">
+                            통한 개개인의 고객에게 맞춤화된
+                            <br>
+                            추천 서비스를 제공합니다.
+                        </span>
+                    </h2>
+                    <a href="./ai-hybrid-retail.html" class="black-link">서비스바로가기</a>
+                </div>
+                <div class="service-slide">
+                    <ul class="service-wrapper">
+                        <li style="background-image: url(./images/main/service/service01.png);">
+                            <p>sports</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service02.png);">
+                            <p>culture</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service03.png);">
+                            <p>beauty</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service01.png);">
+                            <p>sports</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service02.png);">
+                            <p>culture</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service03.png);">
+                            <p>beauty</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service01.png);">
+                            <p>sports</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service02.png);">
+                            <p>culture</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service03.png);">
+                            <p>beauty</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service01.png);">
+                            <p>sports</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service02.png);">
+                            <p>culture</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service03.png);">
+                            <p>beauty</p>
+                        </li>
+                    </ul>
+                    <ul class="service-wrapper">
+                        <li style="background-image: url(./images/main/service/service04.png);">
+                            <p>fashion</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service05.png);">
+                            <p>tour</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service06.png);">
+                            <p>food</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service04.png);">
+                            <p>fashion</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service05.png);">
+                            <p>tour</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service06.png);">
+                            <p>food</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service04.png);">
+                            <p>fashion</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service05.png);">
+                            <p>tour</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service06.png);">
+                            <p>food</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service04.png);">
+                            <p>fashion</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service05.png);">
+                            <p>tour</p>
+                        </li>
+                        <li style="background-image: url(./images/main/service/service06.png);">
+                            <p>food</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <img src="./images/object/pie05.png" alt="pie" class="product-section-object">
+        </section>
+        <section class="section section-test">
+            <div class="sec-inner">
+                <div class="sec-text left">
+                    <p class="white">인텔리시스 제품장점</p>
+                    <h2>
+                        <span class="white">
+                            차별화된 UX 경험을 통해
+                            <br>
+                            구매 전환율을 높이고
+                            <br class="pc">
+                            고객의 능동적인 활동을
+                            <br>
+                            유도합니다.
+                        </span>
+                    </h2>
+                    <a href="./ai-retail-recommendation.html" class="strok-link">제품바로가기</a>
+                </div> 
+                <ul class="img-group">
+                    <li>
+                        <img src="./images/icon/ico-cart.png" alt="cart">
+                    </li>
+                    <li>
+                        <img src="./images/icon/ico-plus.png" alt="plus">
+                    </li>
+                    <li>
+                        <img src="./images/icon/ico-box.png" alt="box">
+                    </li>
+                </ul>
+            </div>
+            <div class="sec-bg"></div>
+        </section>
+        <section class="section fp-auto-height">
+            <div class="sec-inner">
+                <div class="sec-text left">
+                    <p class="white">
+                        인텔리시스 효과
+                    </p>
+                    <h2>
+                        <span class="white">
+                            우리 제품을 사용한 파트너들은
+                            <br>
+                            매출 상승과 서비스에 대한
+                            <br>
+                            높은 고객만족도를
+                            <br>
+                            다양하게 경험하고 있습니다
+                        </span>
+                    </h2>
+                    <a href="./inquire.html" class="strok-link">문의하기</a>
+                </div>
+                <div class="effect-content">
+                    <ul>
+                        <li>
+                            <span>Search</span>
+                            <div class="effect-number">
+                                <h3 class="count1" id="count0">0</h3>
+                                <p>300%이상의 검색효율 항상 효과를 
+                                    <br class="mo">
+                                    누리고 있습니다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Unit price</span>
+                            <div class="effect-number">
+                                <h3 class="count2" id="count1">0</h3>
+                                <p>18%이상의 평균 객단가 상승 효과를 
+                                    <br class="mo">
+                                    보고 있습니다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Residence time</span>
+                            <div class="effect-number">
+                                <h3 class="count3" id="count2">0</h3>
+                                <p>12%이상의 평균 앱 체류 시간 증가 효과를 
+                                    <br class="mo">
+                                    보고 있습니다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>Data</span>
+                            <div class="effect-number">
+                                <h3 class="count4" id="count3">0</h3>
+                                <p>90%이상의 평균 데이터 가공 비용 절감 효과를 
+                                    <br class="mo">
+                                    보고 있습니다.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="effect-object">
+                <img src="./images/object/circle02.png" alt="circle">
+                <img src="./images/object/pie04.png" alt="pie">
+                <img src="./images/object/percent.png" alt="percent">
+            </div>
+        </section>
+        <footer class="section fp-auto-height">
+            <div class="footer-inner">
+                <div class="fot-top">
+                    <ul class="sns">
+                        <li>
+                            <a href="#" class="blog">
+                                <i></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="face">
+                                <i></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="inst">
+                                <i></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="youtube">
+                                <i></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fot-bottom">
+                    <img src="./images/common/logo-gray.png" alt="logo-gray">
+                    <div class="fot-content">
+                        <ul class="pc">
+                            <li> (주)인텔리시스 </li>
+                            <li> 대표이사 : 박은영, 박성찬 </li>
+                            <li> 서울 관악구 관악로 1, 138동 111, 112, 113 호 </li>
+                        </ul>
+                        <div class="mo">
+                            <ul>
+                                <li>(주)인텔리시스</li>
+                                <li>대표이사 : 박은영, 박성찬</li>
+                            </ul>
+                            <ul>
+                                <li>서울 관악구 관악로 1, 138동 111, 112, 113 호</li>
+                            </ul>
+                        </div>
+                        <ul>
+                            <li> 사업자등록번호 329-81-00803 </li>
+                            <li> 문의 contact@intellisys.co.kr  </li>
+                        </ul>
+                        <p class="copy">
+                            Copyright&copy;2021 Intellisys
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <div class="menu">
+        <ul class="sec-inner">
+            <p class="mo">
+                IntelliSys
+            </p>
+            <li>
+                <ul>
+                    <li class="menu-title">
+                        <a href="./company.html">company</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="menu-title">service</li>
+                    <li>
+                        <a href="./ai-hybrid-retail.html">
+                            AI Hybrid Retail
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./fitzme.html">
+                            FITZME
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./case.html">
+                            적용사례
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./project.html">
+                            주요프로젝트
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="menu-title">product</li>
+                    <li>
+                        <a href="./ai-retail-recommendation.html">
+                            AI Retail
+                            <br>
+                            Recommendation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./ai-style-curation.html">
+                            AI Style Curation
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="menu-title">contact</li>
+                    <li>
+                        <a href="./inquire.html">문의하기</a>
+                    </li>
+                    <li>
+                        <a href="./map.html">찾아오시는길</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="./js/common.js"></script>
     <script src="./js/fullpage.js"></script>
+    <script src="./js/slide.js"></script>
 </body>
 </html>
